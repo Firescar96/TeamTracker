@@ -10,25 +10,37 @@
 		2ACA4C12177246EC00F3B3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C11177246EC00F3B3F0 /* UIKit.framework */; };
 		2ACA4C14177246EC00F3B3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C13177246EC00F3B3F0 /* Foundation.framework */; };
 		2ACA4C16177246EC00F3B3F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C15177246EC00F3B3F0 /* CoreGraphics.framework */; };
-		2ACA4C1C177246EC00F3B3F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C1A177246EC00F3B3F0 /* InfoPlist.strings */; };
-		2ACA4C1E177246EC00F3B3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA4C1D177246EC00F3B3F0 /* main.m */; };
-		2ACA4C22177246EC00F3B3F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA4C21177246EC00F3B3F0 /* AppDelegate.m */; };
-		2ACA4C24177246EC00F3B3F0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C23177246EC00F3B3F0 /* Default.png */; };
-		2ACA4C26177246EC00F3B3F0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C25177246EC00F3B3F0 /* Default@2x.png */; };
-		2ACA4C28177246EC00F3B3F0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C27177246EC00F3B3F0 /* Default-568h@2x.png */; };
-		2ACA4C2B177246EC00F3B3F0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C29177246EC00F3B3F0 /* MainStoryboard_iPhone.storyboard */; };
-		2ACA4C2E177246EC00F3B3F0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C2C177246EC00F3B3F0 /* MainStoryboard_iPad.storyboard */; };
-		2ACA4C31177246EC00F3B3F0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA4C30177246EC00F3B3F0 /* FirstViewController.m */; };
-		2ACA4C33177246EC00F3B3F0 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C32177246EC00F3B3F0 /* first.png */; };
-		2ACA4C35177246EC00F3B3F0 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C34177246EC00F3B3F0 /* first@2x.png */; };
-		2ACA4C38177246EC00F3B3F0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA4C37177246EC00F3B3F0 /* SecondViewController.m */; };
-		2ACA4C3A177246EC00F3B3F0 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C39177246EC00F3B3F0 /* second.png */; };
-		2ACA4C3C177246EC00F3B3F0 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C3B177246EC00F3B3F0 /* second@2x.png */; };
 		2ACA4C44177246EC00F3B3F0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C43177246EC00F3B3F0 /* SenTestingKit.framework */; };
 		2ACA4C45177246EC00F3B3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C11177246EC00F3B3F0 /* UIKit.framework */; };
 		2ACA4C46177246EC00F3B3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C13177246EC00F3B3F0 /* Foundation.framework */; };
 		2ACA4C4E177246EC00F3B3F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C4C177246EC00F3B3F0 /* InfoPlist.strings */; };
 		2ACA4C51177246EC00F3B3F0 /* TeamTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA4C50177246EC00F3B3F0 /* TeamTrackerTests.m */; };
+		2AE0344D17780908009C3B39 /* Team_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AE0344B17780908009C3B39 /* Team_Tracker.xcdatamodeld */; };
+		2AE0344F17780A60009C3B39 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE0344E17780A60009C3B39 /* CoreData.framework */; };
+		2AE0345217781318009C3B39 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE0345017781318009C3B39 /* MainWindow.xib */; };
+		2AF34FD31778056400E646D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FA71778056400E646D9 /* Default-568h@2x.png */; };
+		2AF34FD41778056400E646D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FA81778056400E646D9 /* Default.png */; };
+		2AF34FD51778056400E646D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FA91778056400E646D9 /* Default@2x.png */; };
+		2AF34FD61778056400E646D9 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FAA1778056400E646D9 /* first.png */; };
+		2AF34FD71778056400E646D9 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FAB1778056400E646D9 /* first@2x.png */; };
+		2AF34FD81778056400E646D9 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FAC1778056400E646D9 /* second.png */; };
+		2AF34FD91778056400E646D9 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FAD1778056400E646D9 /* second@2x.png */; };
+		2AF34FDA1778056400E646D9 /* TeamTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB11778056400E646D9 /* TeamTrackerAppDelegate.m */; };
+		2AF34FDB1778056400E646D9 /* PlayerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB41778056400E646D9 /* PlayerTable.m */; };
+		2AF34FDC1778056400E646D9 /* PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB61778056400E646D9 /* PlayerList.m */; };
+		2AF34FDD1778056400E646D9 /* PlayerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB81778056400E646D9 /* PlayerListView.m */; };
+		2AF34FDF1778056400E646D9 /* PlayerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FBC1778056400E646D9 /* PlayerPicker.m */; };
+		2AF34FE01778056400E646D9 /* PlayerSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FBE1778056400E646D9 /* PlayerSearch.m */; };
+		2AF34FE11778056400E646D9 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC01778056400E646D9 /* PlayerView.m */; };
+		2AF34FE21778056400E646D9 /* PlayerViewMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC21778056400E646D9 /* PlayerViewMaster.m */; };
+		2AF34FE31778056400E646D9 /* TimerRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC51778056400E646D9 /* TimerRow.m */; };
+		2AF34FE41778056400E646D9 /* TimerRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FC61778056400E646D9 /* TimerRow.xib */; };
+		2AF34FE51778056400E646D9 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC81778056400E646D9 /* TimerView.m */; };
+		2AF34FE61778056400E646D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FCA1778056400E646D9 /* InfoPlist.strings */; };
+		2AF34FE71778056400E646D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FCC1778056400E646D9 /* MainStoryboard_iPad.storyboard */; };
+		2AF34FE81778056400E646D9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FCE1778056400E646D9 /* MainStoryboard_iPhone.storyboard */; };
+		2AF34FE91778056400E646D9 /* TeamTracker-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */; };
+		2AF34FEA1778056400E646D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FD11778056400E646D9 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,31 +58,49 @@
 		2ACA4C11177246EC00F3B3F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2ACA4C13177246EC00F3B3F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2ACA4C15177246EC00F3B3F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2ACA4C19177246EC00F3B3F0 /* TeamTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeamTracker-Info.plist"; sourceTree = "<group>"; };
-		2ACA4C1B177246EC00F3B3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2ACA4C1D177246EC00F3B3F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2ACA4C1F177246EC00F3B3F0 /* TeamTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamTracker-Prefix.pch"; sourceTree = "<group>"; };
-		2ACA4C20177246EC00F3B3F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2ACA4C21177246EC00F3B3F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2ACA4C23177246EC00F3B3F0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		2ACA4C25177246EC00F3B3F0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		2ACA4C27177246EC00F3B3F0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2ACA4C2A177246EC00F3B3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		2ACA4C2D177246EC00F3B3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		2ACA4C2F177246EC00F3B3F0 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		2ACA4C30177246EC00F3B3F0 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		2ACA4C32177246EC00F3B3F0 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		2ACA4C34177246EC00F3B3F0 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		2ACA4C36177246EC00F3B3F0 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2ACA4C37177246EC00F3B3F0 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		2ACA4C39177246EC00F3B3F0 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		2ACA4C3B177246EC00F3B3F0 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		2ACA4C42177246EC00F3B3F0 /* TeamTrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamTrackerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACA4C43177246EC00F3B3F0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2ACA4C4B177246EC00F3B3F0 /* TeamTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeamTrackerTests-Info.plist"; sourceTree = "<group>"; };
 		2ACA4C4D177246EC00F3B3F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2ACA4C4F177246EC00F3B3F0 /* TeamTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamTrackerTests.h; sourceTree = "<group>"; };
 		2ACA4C50177246EC00F3B3F0 /* TeamTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamTrackerTests.m; sourceTree = "<group>"; };
+		2AE0344C17780908009C3B39 /* Service_Registry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Service_Registry.xcdatamodel; sourceTree = "<group>"; };
+		2AE0344E17780A60009C3B39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2AE0345117781318009C3B39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainWindow.xib; sourceTree = "<group>"; };
+		2AF34FA71778056400E646D9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2AF34FA81778056400E646D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2AF34FA91778056400E646D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2AF34FAA1778056400E646D9 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		2AF34FAB1778056400E646D9 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		2AF34FAC1778056400E646D9 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		2AF34FAD1778056400E646D9 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		2AF34FB01778056400E646D9 /* TeamTrackerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamTrackerAppDelegate.h; sourceTree = "<group>"; };
+		2AF34FB11778056400E646D9 /* TeamTrackerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTrackerAppDelegate.m; sourceTree = "<group>"; };
+		2AF34FB31778056400E646D9 /* PlayerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTable.h; sourceTree = "<group>"; };
+		2AF34FB41778056400E646D9 /* PlayerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTable.m; sourceTree = "<group>"; };
+		2AF34FB51778056400E646D9 /* PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerList.h; sourceTree = "<group>"; };
+		2AF34FB61778056400E646D9 /* PlayerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerList.m; sourceTree = "<group>"; };
+		2AF34FB71778056400E646D9 /* PlayerListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerListView.h; sourceTree = "<group>"; };
+		2AF34FB81778056400E646D9 /* PlayerListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerListView.m; sourceTree = "<group>"; };
+		2AF34FBB1778056400E646D9 /* PlayerPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPicker.h; sourceTree = "<group>"; };
+		2AF34FBC1778056400E646D9 /* PlayerPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerPicker.m; sourceTree = "<group>"; };
+		2AF34FBD1778056400E646D9 /* PlayerSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSearch.h; sourceTree = "<group>"; };
+		2AF34FBE1778056400E646D9 /* PlayerSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSearch.m; sourceTree = "<group>"; };
+		2AF34FBF1778056400E646D9 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		2AF34FC01778056400E646D9 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
+		2AF34FC11778056400E646D9 /* PlayerViewMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewMaster.h; sourceTree = "<group>"; };
+		2AF34FC21778056400E646D9 /* PlayerViewMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewMaster.m; sourceTree = "<group>"; };
+		2AF34FC41778056400E646D9 /* TimerRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerRow.h; sourceTree = "<group>"; };
+		2AF34FC51778056400E646D9 /* TimerRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerRow.m; sourceTree = "<group>"; };
+		2AF34FC61778056400E646D9 /* TimerRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerRow.xib; sourceTree = "<group>"; };
+		2AF34FC71778056400E646D9 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
+		2AF34FC81778056400E646D9 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
+		2AF34FCB1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		2AF34FCD1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		2AF34FCF1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TeamTracker-Info.plist"; sourceTree = "<group>"; };
+		2AF34FD11778056400E646D9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AF34FD21778056400E646D9 /* TeamTracker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TeamTracker-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE0344F17780A60009C3B39 /* CoreData.framework in Frameworks */,
 				2ACA4C12177246EC00F3B3F0 /* UIKit.framework in Frameworks */,
 				2ACA4C14177246EC00F3B3F0 /* Foundation.framework in Frameworks */,
 				2ACA4C16177246EC00F3B3F0 /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +131,7 @@
 		2ACA4C05177246EC00F3B3F0 = {
 			isa = PBXGroup;
 			children = (
+				2AE0344E17780A60009C3B39 /* CoreData.framework */,
 				2ACA4C17177246EC00F3B3F0 /* TeamTracker */,
 				2ACA4C49177246EC00F3B3F0 /* TeamTrackerTests */,
 				2ACA4C10177246EC00F3B3F0 /* Frameworks */,
@@ -130,35 +162,15 @@
 		2ACA4C17177246EC00F3B3F0 /* TeamTracker */ = {
 			isa = PBXGroup;
 			children = (
-				2ACA4C20177246EC00F3B3F0 /* AppDelegate.h */,
-				2ACA4C21177246EC00F3B3F0 /* AppDelegate.m */,
-				2ACA4C29177246EC00F3B3F0 /* MainStoryboard_iPhone.storyboard */,
-				2ACA4C2C177246EC00F3B3F0 /* MainStoryboard_iPad.storyboard */,
-				2ACA4C2F177246EC00F3B3F0 /* FirstViewController.h */,
-				2ACA4C30177246EC00F3B3F0 /* FirstViewController.m */,
-				2ACA4C32177246EC00F3B3F0 /* first.png */,
-				2ACA4C34177246EC00F3B3F0 /* first@2x.png */,
-				2ACA4C36177246EC00F3B3F0 /* SecondViewController.h */,
-				2ACA4C37177246EC00F3B3F0 /* SecondViewController.m */,
-				2ACA4C39177246EC00F3B3F0 /* second.png */,
-				2ACA4C3B177246EC00F3B3F0 /* second@2x.png */,
-				2ACA4C18177246EC00F3B3F0 /* Supporting Files */,
+				2AF34FA61778056400E646D9 /* imgs */,
+				2AF34FAE1778056400E646D9 /* Classes */,
+				2AF34FC91778056400E646D9 /* en.lproj */,
+				2AE0344B17780908009C3B39 /* Team_Tracker.xcdatamodeld */,
+				2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */,
+				2AF34FD11778056400E646D9 /* main.m */,
+				2AF34FD21778056400E646D9 /* TeamTracker-Prefix.pch */,
 			);
 			path = TeamTracker;
-			sourceTree = "<group>";
-		};
-		2ACA4C18177246EC00F3B3F0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2ACA4C19177246EC00F3B3F0 /* TeamTracker-Info.plist */,
-				2ACA4C1A177246EC00F3B3F0 /* InfoPlist.strings */,
-				2ACA4C1D177246EC00F3B3F0 /* main.m */,
-				2ACA4C1F177246EC00F3B3F0 /* TeamTracker-Prefix.pch */,
-				2ACA4C23177246EC00F3B3F0 /* Default.png */,
-				2ACA4C25177246EC00F3B3F0 /* Default@2x.png */,
-				2ACA4C27177246EC00F3B3F0 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2ACA4C49177246EC00F3B3F0 /* TeamTrackerTests */ = {
@@ -178,6 +190,83 @@
 				2ACA4C4C177246EC00F3B3F0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AF34FA61778056400E646D9 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				2AF34FA71778056400E646D9 /* Default-568h@2x.png */,
+				2AF34FA81778056400E646D9 /* Default.png */,
+				2AF34FA91778056400E646D9 /* Default@2x.png */,
+				2AF34FAA1778056400E646D9 /* first.png */,
+				2AF34FAB1778056400E646D9 /* first@2x.png */,
+				2AF34FAC1778056400E646D9 /* second.png */,
+				2AF34FAD1778056400E646D9 /* second@2x.png */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
+		2AF34FAE1778056400E646D9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2AF34FAF1778056400E646D9 /* Delegate */,
+				2AF34FB21778056400E646D9 /* Player */,
+				2AF34FC31778056400E646D9 /* Timer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2AF34FAF1778056400E646D9 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2AF34FB01778056400E646D9 /* TeamTrackerAppDelegate.h */,
+				2AF34FB11778056400E646D9 /* TeamTrackerAppDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		2AF34FB21778056400E646D9 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				2AF34FB31778056400E646D9 /* PlayerTable.h */,
+				2AF34FB41778056400E646D9 /* PlayerTable.m */,
+				2AF34FB51778056400E646D9 /* PlayerList.h */,
+				2AF34FB61778056400E646D9 /* PlayerList.m */,
+				2AF34FB71778056400E646D9 /* PlayerListView.h */,
+				2AF34FB81778056400E646D9 /* PlayerListView.m */,
+				2AF34FBB1778056400E646D9 /* PlayerPicker.h */,
+				2AF34FBC1778056400E646D9 /* PlayerPicker.m */,
+				2AF34FBD1778056400E646D9 /* PlayerSearch.h */,
+				2AF34FBE1778056400E646D9 /* PlayerSearch.m */,
+				2AF34FBF1778056400E646D9 /* PlayerView.h */,
+				2AF34FC01778056400E646D9 /* PlayerView.m */,
+				2AF34FC11778056400E646D9 /* PlayerViewMaster.h */,
+				2AF34FC21778056400E646D9 /* PlayerViewMaster.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		2AF34FC31778056400E646D9 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				2AF34FC41778056400E646D9 /* TimerRow.h */,
+				2AF34FC51778056400E646D9 /* TimerRow.m */,
+				2AF34FC61778056400E646D9 /* TimerRow.xib */,
+				2AF34FC71778056400E646D9 /* TimerView.h */,
+				2AF34FC81778056400E646D9 /* TimerView.m */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		2AF34FC91778056400E646D9 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2AE0345017781318009C3B39 /* MainWindow.xib */,
+				2AF34FCA1778056400E646D9 /* InfoPlist.strings */,
+				2AF34FCE1778056400E646D9 /* MainStoryboard_iPhone.storyboard */,
+				2AF34FCC1778056400E646D9 /* MainStoryboard_iPad.storyboard */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,16 +340,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ACA4C1C177246EC00F3B3F0 /* InfoPlist.strings in Resources */,
-				2ACA4C24177246EC00F3B3F0 /* Default.png in Resources */,
-				2ACA4C26177246EC00F3B3F0 /* Default@2x.png in Resources */,
-				2ACA4C28177246EC00F3B3F0 /* Default-568h@2x.png in Resources */,
-				2ACA4C2B177246EC00F3B3F0 /* MainStoryboard_iPhone.storyboard in Resources */,
-				2ACA4C2E177246EC00F3B3F0 /* MainStoryboard_iPad.storyboard in Resources */,
-				2ACA4C33177246EC00F3B3F0 /* first.png in Resources */,
-				2ACA4C35177246EC00F3B3F0 /* first@2x.png in Resources */,
-				2ACA4C3A177246EC00F3B3F0 /* second.png in Resources */,
-				2ACA4C3C177246EC00F3B3F0 /* second@2x.png in Resources */,
+				2AF34FD31778056400E646D9 /* Default-568h@2x.png in Resources */,
+				2AF34FD41778056400E646D9 /* Default.png in Resources */,
+				2AF34FD51778056400E646D9 /* Default@2x.png in Resources */,
+				2AF34FD61778056400E646D9 /* first.png in Resources */,
+				2AF34FD71778056400E646D9 /* first@2x.png in Resources */,
+				2AF34FD81778056400E646D9 /* second.png in Resources */,
+				2AF34FD91778056400E646D9 /* second@2x.png in Resources */,
+				2AF34FE41778056400E646D9 /* TimerRow.xib in Resources */,
+				2AF34FE61778056400E646D9 /* InfoPlist.strings in Resources */,
+				2AF34FE71778056400E646D9 /* MainStoryboard_iPad.storyboard in Resources */,
+				2AF34FE81778056400E646D9 /* MainStoryboard_iPhone.storyboard in Resources */,
+				2AF34FE91778056400E646D9 /* TeamTracker-Info.plist in Resources */,
+				2AE0345217781318009C3B39 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,10 +387,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ACA4C1E177246EC00F3B3F0 /* main.m in Sources */,
-				2ACA4C22177246EC00F3B3F0 /* AppDelegate.m in Sources */,
-				2ACA4C31177246EC00F3B3F0 /* FirstViewController.m in Sources */,
-				2ACA4C38177246EC00F3B3F0 /* SecondViewController.m in Sources */,
+				2AF34FDA1778056400E646D9 /* TeamTrackerAppDelegate.m in Sources */,
+				2AF34FDB1778056400E646D9 /* PlayerTable.m in Sources */,
+				2AF34FDC1778056400E646D9 /* PlayerList.m in Sources */,
+				2AF34FDD1778056400E646D9 /* PlayerListView.m in Sources */,
+				2AF34FDF1778056400E646D9 /* PlayerPicker.m in Sources */,
+				2AF34FE01778056400E646D9 /* PlayerSearch.m in Sources */,
+				2AF34FE11778056400E646D9 /* PlayerView.m in Sources */,
+				2AF34FE21778056400E646D9 /* PlayerViewMaster.m in Sources */,
+				2AF34FE31778056400E646D9 /* TimerRow.m in Sources */,
+				2AF34FE51778056400E646D9 /* TimerView.m in Sources */,
+				2AF34FEA1778056400E646D9 /* main.m in Sources */,
+				2AE0344D17780908009C3B39 /* Team_Tracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,36 +421,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2ACA4C1A177246EC00F3B3F0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2ACA4C1B177246EC00F3B3F0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2ACA4C29177246EC00F3B3F0 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2ACA4C2A177246EC00F3B3F0 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2ACA4C2C177246EC00F3B3F0 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2ACA4C2D177246EC00F3B3F0 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		2ACA4C4C177246EC00F3B3F0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2ACA4C4D177246EC00F3B3F0 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2AE0345017781318009C3B39 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AE0345117781318009C3B39 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		2AF34FCA1778056400E646D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AF34FCB1778056400E646D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2AF34FCC1778056400E646D9 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AF34FCD1778056400E646D9 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		2AF34FCE1778056400E646D9 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AF34FCF1778056400E646D9 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -489,6 +597,7 @@
 				2ACA4C56177246EC00F3B3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ACA4C57177246EC00F3B3F0 /* Build configuration list for PBXNativeTarget "TeamTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -497,8 +606,22 @@
 				2ACA4C59177246EC00F3B3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2AE0344B17780908009C3B39 /* Team_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2AE0344C17780908009C3B39 /* Service_Registry.xcdatamodel */,
+			);
+			currentVersion = 2AE0344C17780908009C3B39 /* Service_Registry.xcdatamodel */;
+			path = Team_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2ACA4C06177246EC00F3B3F0 /* Project object */;
 }
