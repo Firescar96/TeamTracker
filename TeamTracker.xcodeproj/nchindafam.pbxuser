@@ -1,0 +1,227 @@
+// !$*UTF8*$!
+{
+	2A1C5A631784A7440000D451 /* TextCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {798, 451}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 292}";
+		};
+	};
+	2A23ABBB177965CE00FBE4A1 /* TeamTracker */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TeamTracker;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	2A23ABD1177965D300FBE4A1 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	2A23ABD2177965D300FBE4A1 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	2A23ABF81779679500FBE4A1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FD11778056400E646D9 /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 355;
+		vrLoc = 0;
+	};
+	2A23ABF91779679500FBE4A1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FCB1778056400E646D9 /* en */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	2A5C3F231784B29700B7C766 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FCF1778056400E646D9 /* en */;
+		name = "MainStoryboard_iPhone.storyboard: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1572;
+		vrLoc = 0;
+	};
+	2A5C3F241784B29700B7C766 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/nchindafam/Documents/AppTicks/TeamTracker/TeamTracker/TeamTracker-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	2A5C3F251784B29700B7C766 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FCD1778056400E646D9 /* en */;
+		name = "MainStoryboard_iPad.storyboard: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2402;
+		vrLoc = 0;
+	};
+	2A5C3F261784B29700B7C766 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2A1C5A631784A7440000D451 /* TextCell.h */;
+		name = "TextCell.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 292;
+		vrLoc = 0;
+	};
+	2A5C3F321784B2BE00B7C766 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FBF1778056400E646D9 /* PlayerNew.h */;
+		name = "PlayerNew.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 881;
+		vrLoc = 0;
+	};
+	2A5C3F331784B2BE00B7C766 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FBF1778056400E646D9 /* PlayerNew.h */;
+		name = "PlayerNew.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 970;
+		vrLoc = 92;
+	};
+	2ACA4C06177246EC00F3B3F0 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 2A23ABBB177965CE00FBE4A1 /* TeamTracker */;
+		activeTarget = 2ACA4C0D177246EC00F3B3F0 /* TeamTracker */;
+		addToTargets = (
+			2ACA4C0D177246EC00F3B3F0 /* TeamTracker */,
+		);
+		codeSenseManager = 2A23ABD2177965D300FBE4A1 /* Code sense */;
+		executables = (
+			2A23ABBB177965CE00FBE4A1 /* TeamTracker */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					791,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 394572452;
+			PBXWorkspaceStateSaveDate = 394572452;
+		};
+		perUserProjectItems = {
+			2A23ABF81779679500FBE4A1 /* PBXTextBookmark */ = 2A23ABF81779679500FBE4A1 /* PBXTextBookmark */;
+			2A23ABF91779679500FBE4A1 /* PBXTextBookmark */ = 2A23ABF91779679500FBE4A1 /* PBXTextBookmark */;
+			2A5C3F231784B29700B7C766 /* PBXTextBookmark */ = 2A5C3F231784B29700B7C766 /* PBXTextBookmark */;
+			2A5C3F241784B29700B7C766 /* PlistBookmark */ = 2A5C3F241784B29700B7C766 /* PlistBookmark */;
+			2A5C3F251784B29700B7C766 /* PBXTextBookmark */ = 2A5C3F251784B29700B7C766 /* PBXTextBookmark */;
+			2A5C3F261784B29700B7C766 /* PBXTextBookmark */ = 2A5C3F261784B29700B7C766 /* PBXTextBookmark */;
+			2A5C3F321784B2BE00B7C766 /* PBXTextBookmark */ = 2A5C3F321784B2BE00B7C766 /* PBXTextBookmark */;
+			2A5C3F331784B2BE00B7C766 /* PBXTextBookmark */ = 2A5C3F331784B2BE00B7C766 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 2A23ABD1177965D300FBE4A1 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	2ACA4C0D177246EC00F3B3F0 /* TeamTracker */ = {
+		activeExec = 0;
+		executables = (
+			2A23ABBB177965CE00FBE4A1 /* TeamTracker */,
+		);
+	};
+	2ACA4C41177246EC00F3B3F0 /* TeamTrackerTests */ = {
+		activeExec = 0;
+	};
+	2AF34FBF1778056400E646D9 /* PlayerNew.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {954, 741}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{92, 970}";
+		};
+	};
+	2AF34FCB1778056400E646D9 /* en */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 237}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	2AF34FCD1778056400E646D9 /* en */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1538, 5278}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2402}";
+		};
+	};
+	2AF34FCF1778056400E646D9 /* en */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1895, 1599}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1572}";
+		};
+	};
+	2AF34FD11778056400E646D9 /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {719, 247}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 355}";
+		};
+	};
+}
