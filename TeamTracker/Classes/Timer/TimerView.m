@@ -11,21 +11,49 @@
 
 @implementation TimerView
 
-@synthesize timerSplits;
+@synthesize sView;
 
+@synthesize timerSplits;
+@synthesize reset;
+
+@synthesize playerList;
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    timerSplits = [[NSMutableArray alloc] init];
-    timerSplits[0] = [[TimerRow alloc] init];
+    playerList = [[PlayerNameList alloc] init];
     
-    [[timerSplits[0] view] setFrame:CGRectMake(0, 40, 768, 160)];
+    timerSplits = [[TimerRow alloc] init];
+    [[timerSplits view] setFrame:CGRectMake(0, 40, 768, 160)];
     
-    ///[self presentViewController:[[TimerRow alloc] init] animated:YES completion:^{
-     //   [self dismissViewControllerAnimated:NO completion:nil];
-        [[self view] addSubview:[timerSplits[0] view]];
-   // }];
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:.7];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:kCATransitionFromTop];
+    [[timerSplits.view layer] addAnimation:animation forKey:@"newSubTime"];
+    [[self sView] addSubview:[timerSplits view]];
+}
+
+-(IBAction)resetClocks
+{
+    [timerSplits stopClock];
+    [timerSplits.view removeFromSuperview];
+    
+    timerSplits = [[TimerRow alloc] init];
+    [[timerSplits view] setFrame:CGRectMake(0, 40, 768, 160)];
+    
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:1];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:kCATransitionFromTop];
+    [[timerSplits.view layer] addAnimation:animation forKey:@"newSubTime"];
+    [[self sView] addSubview:[timerSplits view]];
+}
+
+-(IBAction) saveClocks
+{
+    playerList.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:playerList animated:YES completion:nil];
 }
 
 // Override to allow orientations other than the default portrait orientation.

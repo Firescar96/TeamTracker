@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A171E60179B67D20071C579 /* PlayerNameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A171E5E179B67D20071C579 /* PlayerNameList.m */; };
+		2A171E61179B67D20071C579 /* PlayerNameList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A171E5F179B67D20071C579 /* PlayerNameList.xib */; };
+		2A1798041789F6420059B4D7 /* UIDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1798031789F6420059B4D7 /* UIDropDownMenu.m */; };
+		2A179807178A09970059B4D7 /* FlipLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A179806178A09970059B4D7 /* FlipLeftSegue.m */; };
+		2A17980D178A0C770059B4D7 /* FlipRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A17980C178A0C770059B4D7 /* FlipRightSegue.m */; };
 		2A1C5A621784A1D40000D451 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1C5A611784A1D40000D451 /* TextCell.xib */; };
 		2A1C5A651784A7440000D451 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C5A641784A7440000D451 /* TextCell.m */; };
+		2A371C6F178A494900E03190 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A371C6E178A494900E03190 /* PlayerView.m */; };
+		2A7E8FBD1798FF1400D2FD92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */; };
 		2AC8FF151778DC02007C9800 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC8FF141778DC02007C9800 /* libc++abi.dylib */; };
 		2ACA4C12177246EC00F3B3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C11177246EC00F3B3F0 /* UIKit.framework */; };
 		2ACA4C14177246EC00F3B3F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C13177246EC00F3B3F0 /* Foundation.framework */; };
@@ -30,10 +37,8 @@
 		2AF34FDA1778056400E646D9 /* TeamTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB11778056400E646D9 /* TeamTrackerAppDelegate.m */; };
 		2AF34FDB1778056400E646D9 /* PlayerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB41778056400E646D9 /* PlayerTable.m */; };
 		2AF34FDC1778056400E646D9 /* PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB61778056400E646D9 /* PlayerList.m */; };
-		2AF34FDD1778056400E646D9 /* PlayerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FB81778056400E646D9 /* PlayerListView.m */; };
 		2AF34FE01778056400E646D9 /* PlayerSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FBE1778056400E646D9 /* PlayerSearch.m */; };
 		2AF34FE11778056400E646D9 /* PlayerNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC01778056400E646D9 /* PlayerNew.m */; };
-		2AF34FE21778056400E646D9 /* PlayerMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC21778056400E646D9 /* PlayerMaster.m */; };
 		2AF34FE31778056400E646D9 /* TimerRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC51778056400E646D9 /* TimerRow.m */; };
 		2AF34FE41778056400E646D9 /* TimerRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FC61778056400E646D9 /* TimerRow.xib */; };
 		2AF34FE51778056400E646D9 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC81778056400E646D9 /* TimerView.m */; };
@@ -55,9 +60,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A1C5A611784A1D40000D451 /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
-		2A1C5A631784A7440000D451 /* TextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextCell.h; sourceTree = "<group>"; };
-		2A1C5A641784A7440000D451 /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextCell.m; sourceTree = "<group>"; };
+		2A171E5D179B67D20071C579 /* PlayerNameList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerNameList.h; sourceTree = "<group>"; };
+		2A171E5E179B67D20071C579 /* PlayerNameList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerNameList.m; sourceTree = "<group>"; };
+		2A171E5F179B67D20071C579 /* PlayerNameList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerNameList.xib; sourceTree = "<group>"; };
+		2A1798021789F6420059B4D7 /* UIDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDropDownMenu.h; path = "TeamTracker/Classes/DropDown Menu/UIDropDownMenu.h"; sourceTree = SOURCE_ROOT; };
+		2A1798031789F6420059B4D7 /* UIDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDropDownMenu.m; path = "TeamTracker/Classes/DropDown Menu/UIDropDownMenu.m"; sourceTree = SOURCE_ROOT; };
+		2A179805178A09970059B4D7 /* FlipLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipLeftSegue.h; path = TeamTracker/Classes/Common/FlipLeftSegue.h; sourceTree = SOURCE_ROOT; };
+		2A179806178A09970059B4D7 /* FlipLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipLeftSegue.m; path = TeamTracker/Classes/Common/FlipLeftSegue.m; sourceTree = SOURCE_ROOT; };
+		2A17980B178A0C770059B4D7 /* FlipRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipRightSegue.h; path = ../Common/FlipRightSegue.h; sourceTree = "<group>"; };
+		2A17980C178A0C770059B4D7 /* FlipRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipRightSegue.m; path = ../Common/FlipRightSegue.m; sourceTree = "<group>"; };
+		2A1C5A611784A1D40000D451 /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextCell.xib; path = New/TextCell.xib; sourceTree = "<group>"; };
+		2A1C5A631784A7440000D451 /* TextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextCell.h; path = New/TextCell.h; sourceTree = "<group>"; };
+		2A1C5A641784A7440000D451 /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextCell.m; path = New/TextCell.m; sourceTree = "<group>"; };
+		2A371C6D178A494900E03190 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerView.h; path = View/PlayerView.h; sourceTree = "<group>"; };
+		2A371C6E178A494900E03190 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerView.m; path = View/PlayerView.m; sourceTree = "<group>"; };
+		2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2AC8FF141778DC02007C9800 /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
 		2ACA4C0E177246EC00F3B3F0 /* TeamTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACA4C11177246EC00F3B3F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -82,23 +99,19 @@
 		2AF34FB11778056400E646D9 /* TeamTrackerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTrackerAppDelegate.m; sourceTree = "<group>"; };
 		2AF34FB31778056400E646D9 /* PlayerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTable.h; sourceTree = "<group>"; };
 		2AF34FB41778056400E646D9 /* PlayerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTable.m; sourceTree = "<group>"; };
-		2AF34FB51778056400E646D9 /* PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerList.h; sourceTree = "<group>"; };
-		2AF34FB61778056400E646D9 /* PlayerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerList.m; sourceTree = "<group>"; };
-		2AF34FB71778056400E646D9 /* PlayerListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerListView.h; sourceTree = "<group>"; };
-		2AF34FB81778056400E646D9 /* PlayerListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerListView.m; sourceTree = "<group>"; };
-		2AF34FBD1778056400E646D9 /* PlayerSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSearch.h; sourceTree = "<group>"; };
-		2AF34FBE1778056400E646D9 /* PlayerSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSearch.m; sourceTree = "<group>"; };
-		2AF34FBF1778056400E646D9 /* PlayerNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerNew.h; sourceTree = "<group>"; };
-		2AF34FC01778056400E646D9 /* PlayerNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerNew.m; sourceTree = "<group>"; };
-		2AF34FC11778056400E646D9 /* PlayerMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMaster.h; sourceTree = "<group>"; };
-		2AF34FC21778056400E646D9 /* PlayerMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMaster.m; sourceTree = "<group>"; };
+		2AF34FB51778056400E646D9 /* PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerList.h; path = Search/PlayerList.h; sourceTree = "<group>"; };
+		2AF34FB61778056400E646D9 /* PlayerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerList.m; path = Search/PlayerList.m; sourceTree = "<group>"; };
+		2AF34FBD1778056400E646D9 /* PlayerSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerSearch.h; path = Search/PlayerSearch.h; sourceTree = "<group>"; };
+		2AF34FBE1778056400E646D9 /* PlayerSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerSearch.m; path = Search/PlayerSearch.m; sourceTree = "<group>"; };
+		2AF34FBF1778056400E646D9 /* PlayerNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerNew.h; path = New/PlayerNew.h; sourceTree = "<group>"; };
+		2AF34FC01778056400E646D9 /* PlayerNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerNew.m; path = New/PlayerNew.m; sourceTree = "<group>"; };
 		2AF34FC41778056400E646D9 /* TimerRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerRow.h; sourceTree = "<group>"; };
 		2AF34FC51778056400E646D9 /* TimerRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerRow.m; sourceTree = "<group>"; };
 		2AF34FC61778056400E646D9 /* TimerRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerRow.xib; sourceTree = "<group>"; };
 		2AF34FC71778056400E646D9 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
 		2AF34FC81778056400E646D9 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
 		2AF34FCB1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		2AF34FCD1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		2AF34FCD1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		2AF34FCF1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TeamTracker-Info.plist"; sourceTree = "<group>"; };
 		2AF34FD11778056400E646D9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7E8FBD1798FF1400D2FD92 /* QuartzCore.framework in Frameworks */,
 				2AC8FF151778DC02007C9800 /* libc++abi.dylib in Frameworks */,
 				2AE0344F17780A60009C3B39 /* CoreData.framework in Frameworks */,
 				2ACA4C12177246EC00F3B3F0 /* UIKit.framework in Frameworks */,
@@ -131,15 +145,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1798011789F6070059B4D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A371C6D178A494900E03190 /* PlayerView.h */,
+				2A371C6E178A494900E03190 /* PlayerView.m */,
+				2A1798021789F6420059B4D7 /* UIDropDownMenu.h */,
+				2A1798031789F6420059B4D7 /* UIDropDownMenu.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		2A1C5A5E178391C40000D451 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				2AF34FB31778056400E646D9 /* PlayerTable.h */,
 				2AF34FB41778056400E646D9 /* PlayerTable.m */,
-				2AF34FC11778056400E646D9 /* PlayerMaster.h */,
-				2AF34FC21778056400E646D9 /* PlayerMaster.m */,
+				2A179805178A09970059B4D7 /* FlipLeftSegue.h */,
+				2A179806178A09970059B4D7 /* FlipLeftSegue.m */,
+				2A17980B178A0C770059B4D7 /* FlipRightSegue.h */,
+				2A17980C178A0C770059B4D7 /* FlipRightSegue.m */,
 			);
 			name = Common;
+			path = Player;
 			sourceTree = "<group>";
 		};
 		2A1C5A5F178391E60000D451 /* Search */ = {
@@ -147,8 +175,6 @@
 			children = (
 				2AF34FB51778056400E646D9 /* PlayerList.h */,
 				2AF34FB61778056400E646D9 /* PlayerList.m */,
-				2AF34FB71778056400E646D9 /* PlayerListView.h */,
-				2AF34FB81778056400E646D9 /* PlayerListView.m */,
 				2AF34FBD1778056400E646D9 /* PlayerSearch.h */,
 				2AF34FBE1778056400E646D9 /* PlayerSearch.m */,
 			);
@@ -170,6 +196,7 @@
 		2ACA4C05177246EC00F3B3F0 = {
 			isa = PBXGroup;
 			children = (
+				2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */,
 				2ACA4C17177246EC00F3B3F0 /* TeamTracker */,
 				2ACA4C49177246EC00F3B3F0 /* TeamTrackerTests */,
 				2ACA4C10177246EC00F3B3F0 /* Frameworks */,
@@ -208,6 +235,7 @@
 				2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */,
 				2AF34FD11778056400E646D9 /* main.m */,
 				2AF34FD21778056400E646D9 /* TeamTracker-Prefix.pch */,
+				2AEB4BAA1779682B0095C2FA /* TeamTracker.xcdatamodeld */,
 			);
 			path = TeamTracker;
 			sourceTree = "<group>";
@@ -248,6 +276,7 @@
 		2AF34FAE1778056400E646D9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2A1C5A5E178391C40000D451 /* Common */,
 				2AF34FAF1778056400E646D9 /* Delegate */,
 				2AF34FB21778056400E646D9 /* Player */,
 				2AF34FC31778056400E646D9 /* Timer */,
@@ -267,9 +296,9 @@
 		2AF34FB21778056400E646D9 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				2A1798011789F6070059B4D7 /* View */,
 				2A1C5A60178391FE0000D451 /* New */,
 				2A1C5A5F178391E60000D451 /* Search */,
-				2A1C5A5E178391C40000D451 /* Common */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -282,7 +311,9 @@
 				2AF34FC61778056400E646D9 /* TimerRow.xib */,
 				2AF34FC71778056400E646D9 /* TimerView.h */,
 				2AF34FC81778056400E646D9 /* TimerView.m */,
-				2AEB4BAA1779682B0095C2FA /* TeamTracker.xcdatamodeld */,
+				2A171E5D179B67D20071C579 /* PlayerNameList.h */,
+				2A171E5E179B67D20071C579 /* PlayerNameList.m */,
+				2A171E5F179B67D20071C579 /* PlayerNameList.xib */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -381,6 +412,7 @@
 				2AF34FE81778056400E646D9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				2AF34FE91778056400E646D9 /* TeamTracker-Info.plist in Resources */,
 				2A1C5A621784A1D40000D451 /* TextCell.xib in Resources */,
+				2A171E61179B67D20071C579 /* PlayerNameList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,15 +450,18 @@
 				2AF34FDA1778056400E646D9 /* TeamTrackerAppDelegate.m in Sources */,
 				2AF34FDB1778056400E646D9 /* PlayerTable.m in Sources */,
 				2AF34FDC1778056400E646D9 /* PlayerList.m in Sources */,
-				2AF34FDD1778056400E646D9 /* PlayerListView.m in Sources */,
 				2AF34FE01778056400E646D9 /* PlayerSearch.m in Sources */,
 				2AF34FE11778056400E646D9 /* PlayerNew.m in Sources */,
-				2AF34FE21778056400E646D9 /* PlayerMaster.m in Sources */,
 				2AF34FE31778056400E646D9 /* TimerRow.m in Sources */,
 				2AF34FE51778056400E646D9 /* TimerView.m in Sources */,
 				2AF34FEA1778056400E646D9 /* main.m in Sources */,
 				2AEB4BAC1779682C0095C2FA /* TeamTracker.xcdatamodeld in Sources */,
 				2A1C5A651784A7440000D451 /* TextCell.m in Sources */,
+				2A1798041789F6420059B4D7 /* UIDropDownMenu.m in Sources */,
+				2A179807178A09970059B4D7 /* FlipLeftSegue.m in Sources */,
+				2A17980D178A0C770059B4D7 /* FlipRightSegue.m in Sources */,
+				2A371C6F178A494900E03190 /* PlayerView.m in Sources */,
+				2A171E60179B67D20071C579 /* PlayerNameList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,9 +672,8 @@
 				2AEB4BAB1779682C0095C2FA /* TeamTracker.xcdatamodel */,
 			);
 			currentVersion = 2AEB4BAB1779682C0095C2FA /* TeamTracker.xcdatamodel */;
-			name = TeamTracker.xcdatamodeld;
-			path = ../../../TeamTracker.xcdatamodeld;
-			sourceTree = "<group>";
+			path = TeamTracker.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

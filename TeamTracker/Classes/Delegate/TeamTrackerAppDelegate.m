@@ -10,9 +10,10 @@
 
 @implementation TeamTrackerAppDelegate
 
+@synthesize editAble;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     return YES;
 }
 							
@@ -61,6 +62,52 @@
 
 
 #pragma mark -
+
+-(void) saveNewPlayer:(NSString*)name withStats:(NSMutableArray*)stats;
+{
+	
+	NSManagedObjectContext *context = self.managedObjectContext;
+	
+	NSManagedObject *newPlayer = [NSEntityDescription
+                                  insertNewObjectForEntityForName:@"Player"
+                                  inManagedObjectContext:context];
+	
+	NSData *statData = [NSKeyedArchiver archivedDataWithRootObject:stats];
+	
+	[newPlayer setValue:name forKey:@"name"];
+	[newPlayer setValue:statData forKey:@"stats"];
+	
+	NSError *error;
+	[context save:&error];
+}
+
+
+-(NSArray*) findPlayersinCategory:(NSString *)category forQuery:(NSString *)query
+{
+	NSManagedObjectContext *moc = [self
+								   managedObjectContext];
+	
+	NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:@"Player" inManagedObjectContext:moc];
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:entityDescription];
+	
+	if(![query isEqual:nil] && ![query isEqualToString:@""] && ![query isEqualToString:@" "] && ![query isEqualToString:@"  "])
+	{
+		NSPredicate *predicate = [NSPredicate predicateWithFormat: [NSString stringWithFormat:@"(%@ CONTAINS[nc] '%@')", category, query]];
+		[request setPredicate:predicate];
+	}
+	
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:category
+																   ascending:YES];
+	NSArray *sortDescriptors= [[NSArray alloc] initWithObjects:sortDescriptor , nil];
+	[request setSortDescriptors:sortDescriptors];
+	
+	NSError *error;
+	return [moc executeFetchRequest:request error:&error];
+}
+
+
 #pragma mark Core Data stack
 
 /**
@@ -104,8 +151,11 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TeamTracker.sqlite"];
     
     NSError *error = nil;
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+    						 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+    						 [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
     persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         
 		
 		/*

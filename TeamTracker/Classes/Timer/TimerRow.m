@@ -15,7 +15,6 @@
 @synthesize start;
 @synthesize stop;
 @synthesize split;
-@synthesize reset;
 @synthesize oldTime;
 @synthesize subTime;
 
@@ -33,8 +32,6 @@
     clockTime = sec + (min*60) + (hour*3600) + ((double)mil/100);
     
     oldTime = [[NSDate alloc] initWithTimeIntervalSinceNow:-clockTime];
-    
-    //NSLog([NSString stringWithFormat:@"%f", clockTime]);
     
     [NSTimer scheduledTimerWithTimeInterval: .05 target: self
                                                       selector: @selector(updateTimer:) userInfo: nil repeats: YES];
@@ -80,6 +77,11 @@
 -(void)stopClock
 {
     runClock = NO;
+    
+    if (subTime)
+    {
+        [subTime stopClock];
+    }
 }
 
 -(void)splitTime
@@ -124,10 +126,13 @@
     
     self.split.alpha = 0;
     self.split.enabled = NO;
-    //[self presentViewController:[[TimerRow alloc] init] animated:YES completion:^{
-     //   [self dismissViewControllerAnimated:NO completion:nil];
-        [[self view] addSubview:[subTime view]];
-    //}];
+    
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:.25];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:kCATransitionFromTop];
+    [[subTime.view layer] addAnimation:animation forKey:@"newSubTime"];
+    [[self view] addSubview:[subTime view]];
 }
 
 -(void)makeSpace
@@ -142,10 +147,26 @@
     {
         UIScrollView* baseView = (UIScrollView*)[[self view] superview];
         [baseView setContentSize:CGSizeMake(width, height+80)];
-        //NSLog([NSString stringWithFormat:@"%i", height]);
+        
+        if(baseView.contentSize.height > baseView.bounds.size.height)
+        {
+            CGPoint bottomOffset = CGPointMake(0, baseView.contentSize.height - baseView.bounds.size.height);
+            [baseView setContentOffset:bottomOffset animated:YES];
+        }
     }
 
     [[self view] setFrame:CGRectMake(0, y, 768, height+160)];
+}
+
+-(NSString*)subClockTime
+{
+    TimerRow* nextResponder = (TimerRow*)[[[self view] superview] nextResponder];
+    if([nextResponder isKindOfClass:[TimerRow class]])
+    {
+        return [NSString stringWithFormat:@"%f%@%@", -[oldTime timeIntervalSinceNow], @", ", [nextResponder subClockTime]];
+    }
+    
+    return [NSString stringWithFormat:@"%f", -[oldTime timeIntervalSinceNow]];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -166,9 +187,5 @@
     
     // Release any cached data, images, etc. that aren't in use.
 }
-
-- (void)dealloc {
-}
-
 
 @end

@@ -8,46 +8,51 @@
 
 #import <UIKit/UIKit.h>
 #import "TeamTrackerAppDelegate.h"
-
-#import "PlayerSearch.h"
-#import "PlayerList.h"
 #import "TextCell.h"
+
+@class PlayerView;
+@class PlayerList;
 
 @interface PlayerNew : UIViewController<UITableViewDataSource, UITableViewDelegate> {
 	
-	IBOutlet TeamTrackerAppDelegate *appDelegate;
-	
-	IBOutlet UITextField *name;
+	TeamTrackerAppDelegate *dataMaster;
+    NSArray *passedViewData;
+    NSArray *passedListData;
+    NSMutableArray *TFReload;
     
-	IBOutlet PlayerSearch	*sSearch;
-	IBOutlet PlayerList *sList;
+	IBOutlet UITextField *name;
     
     IBOutlet UITableView *tvMeet;
     IBOutlet UITextField *tfMeet;
     IBOutlet UITableView *tvEvent;
     IBOutlet UITextField *tfEvent;
-	IBOutlet UITextField *tfScore;
+	IBOutlet UITableView *tvScore;
     NSMutableArray *assign; //contains dictionary of meets and events
     
     int curMeet;
-    int curEvent;
 }
-@property (nonatomic, retain) IBOutlet TeamTrackerAppDelegate *appDelegate;
+@property (nonatomic, retain) TeamTrackerAppDelegate *dataMaster;
+@property (nonatomic, retain) NSArray *passedViewData;
+@property (nonatomic, retain) NSArray *passedListData;
 
 @property (nonatomic, retain) IBOutlet UITextField *name;
-@property (nonatomic, retain) IBOutlet UITextField *event;
-
-@property (nonatomic, retain) IBOutlet PlayerSearch	*sSearch;
-@property (nonatomic, retain) IBOutlet PlayerList *sList;
 
 @property (nonatomic, retain) IBOutlet UITableView *tvMeet;
 @property (nonatomic, retain) IBOutlet UITextField *tfMeet;
 @property (nonatomic, retain) IBOutlet UITableView *tvEvent;
 @property (nonatomic, retain) IBOutlet UITextField *tfEvent;
-@property (nonatomic, retain) IBOutlet UITextField *tfScore;
+@property (nonatomic, retain) IBOutlet UITableView *tvScore;
 
--(IBAction)backgroundTouched:(id)sender;
--(IBAction)addPlayer;
--(IBAction)addMeet;
--(IBAction)addEvent;
+-(void)setPassedValue:(NSArray *)mine andValue:(NSArray *)yours;
+
+-(IBAction) backgroundTouched:(id)sender;
+-(IBAction) addPlayer;
+-(IBAction) addMeet;
+-(IBAction) changeMeet:(id)sender;
+-(IBAction) addEvent;
+-(IBAction) changeEvent:(id)sender;
+-(IBAction) changeScore:(id)sender;
+
+-(IBAction)cellTouch:(id)sender;
+
 @end
