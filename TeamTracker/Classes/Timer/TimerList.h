@@ -1,5 +1,5 @@
 //
-//  PlayerList.h
+//  TimerList.h
 //  PlayerTracker
 //
 //  Created by Nchinda Fam on 1/13/13.
@@ -9,43 +9,46 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "TeamTrackerAppDelegate.h"
+#import "TextCell.h"
 
-@class PlayerView;
-@class PlayerNew;
+@class TimerView;
 
-@interface PlayerList : UIViewController<UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
-
+@interface TimerList : UIViewController<UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
+    
     TeamTrackerAppDelegate *dataMaster;
     NSArray *passedViewData;
-    NSArray *passedListData;
     NSString *query;
     NSString *type;
     
-    #pragma TableViewController
+    UIViewController *timerMaster;
+    
+#pragma TableViewController
 	IBOutlet UITableView *tvStat;
 	
 	NSMutableArray *foundPlay;
 	NSMutableArray *names;
-	NSMutableArray *meets;
-	NSMutableArray *events;
-	NSMutableArray *score;
+	NSMutableArray *maxTime;
+	NSMutableArray *minTime;
+    NSString *player;
     
-    #pragma TableViewGestures
+#pragma TableViewGestures
     IBOutlet UIGestureRecognizer *singRecog;
     IBOutlet UIGestureRecognizer *dubRecog;
     
-    #pragma PickerViewController
+#pragma PickerViewController
     IBOutlet UIPickerView *pvStat;
     NSArray* status;
     
-    #pragma PlayerView
+#pragma PlayerView
+    IBOutlet UISegmentedControl *order;
     IBOutlet UISwitch *edit;
 }
+
 @property (nonatomic, retain) TeamTrackerAppDelegate *dataMaster;
 @property (nonatomic, retain) NSArray *passedViewData;
-@property (nonatomic, retain) NSArray *passedNewData;
 @property (nonatomic, retain) NSString *query;
 @property (nonatomic, retain) NSString *type;
+@property (nonatomic, retain) UIViewController *timerMaster;
 
 #pragma TableViewController
 @property (nonatomic, retain) IBOutlet UIPickerView *pvStat;
@@ -53,7 +56,7 @@
 
 @property (nonatomic, retain) NSMutableArray *foundPlay;
 
--(void)setPassedValue:(NSArray *)mine andValue:(NSArray *)yours;
+@property (nonatomic, retain) NSString *player;
 
 -(IBAction)backgroundTouched:(id)sender;
 
@@ -67,6 +70,11 @@
 -(IBAction)doubleTapFrom:(UIGestureRecognizer *)recognizer;;
 
 #pragma PlayerView
-@property (nonatomic, retain) IBOutlet UISwitch *edit;
+@property(nonatomic, retain) IBOutlet UISegmentedControl *order;
+@property(nonatomic, retain) IBOutlet UISwitch *edit;
+
+-(IBAction) gotoNew;
+-(IBAction) gotoView;
+-(IBAction) changeOrder;
 
 @end

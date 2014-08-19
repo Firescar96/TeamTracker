@@ -45,7 +45,6 @@
 								<string key="NSFrame">{{0, 7}, {200, 30}}</string>
 								<reference key="NSSuperview" ref="823141941"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -120,24 +119,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">changeMeet:</string>
-						<reference key="source" ref="195975186"/>
-						<reference key="destination" ref="975951072"/>
-						<int key="IBEventType">18</int>
-					</object>
-					<int key="connectionID">30</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">changeMeet:</string>
-						<reference key="source" ref="195975186"/>
-						<reference key="destination" ref="975951072"/>
-						<int key="IBEventType">19</int>
-					</object>
-					<int key="connectionID">32</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">backgroundTouched:</string>
 						<reference key="source" ref="195975186"/>
 						<reference key="destination" ref="975951072"/>
@@ -147,12 +128,12 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">cellTouch:</string>
+						<string key="label">changeStat:</string>
 						<reference key="source" ref="195975186"/>
 						<reference key="destination" ref="975951072"/>
-						<int key="IBEventType">17</int>
+						<int key="IBEventType">18</int>
 					</object>
-					<int key="connectionID">39</int>
+					<int key="connectionID">40</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -201,7 +182,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">39</int>
+			<int key="maxID">40</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -210,17 +191,12 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="backgroundTouched:">id</string>
-						<string key="changeEdit">id</string>
 						<string key="doubleTapFrom:">UIGestureRecognizer</string>
 						<string key="singleTapFrom:">UIGestureRecognizer</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="backgroundTouched:">
 							<string key="name">backgroundTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeEdit">
-							<string key="name">changeEdit</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="doubleTapFrom:">
@@ -234,20 +210,19 @@
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="dubRecog">UIGestureRecognizer</string>
-						<string key="foundPlay">NSMutableArray</string>
+						<string key="edit">UISwitch</string>
 						<string key="pvStat">UIPickerView</string>
 						<string key="singRecog">UIGestureRecognizer</string>
 						<string key="tvStat">UITableView</string>
-						<string key="viewMaster">PlayerViewMaster</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="dubRecog">
 							<string key="name">dubRecog</string>
 							<string key="candidateClassName">UIGestureRecognizer</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="foundPlay">
-							<string key="name">foundPlay</string>
-							<string key="candidateClassName">NSMutableArray</string>
+						<object class="IBToOneOutletInfo" key="edit">
+							<string key="name">edit</string>
+							<string key="candidateClassName">UISwitch</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pvStat">
 							<string key="name">pvStat</string>
@@ -260,10 +235,6 @@
 						<object class="IBToOneOutletInfo" key="tvStat">
 							<string key="name">tvStat</string>
 							<string key="candidateClassName">UITableView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="viewMaster">
-							<string key="name">viewMaster</string>
-							<string key="candidateClassName">PlayerViewMaster</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -283,6 +254,7 @@
 						<string key="changeEvent:">id</string>
 						<string key="changeMeet:">id</string>
 						<string key="changeScore:">id</string>
+						<string key="changeStat:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="addEvent">
@@ -315,6 +287,10 @@
 						</object>
 						<object class="IBActionInfo" key="changeScore:">
 							<string key="name">changeScore:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="changeStat:">
+							<string key="name">changeStat:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
@@ -358,399 +334,109 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">PlayerTable</string>
-					<string key="superclassName">UITableViewController</string>
+					<string key="className">PlayerView</string>
+					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="addEvent">id</string>
+						<string key="addMeet">id</string>
+						<string key="addPlayer">id</string>
 						<string key="backgroundTouched:">id</string>
-						<string key="buttonClicked:">id</string>
-						<string key="calcFinal">id</string>
-						<string key="changeEdit">id</string>
+						<string key="cellTouch:">id</string>
+						<string key="changeEvent:">id</string>
+						<string key="changeMeet:">id</string>
+						<string key="changeScore:">id</string>
+						<string key="singleTapFrom:">UIGestureRecognizer</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="addEvent">
+							<string key="name">addEvent</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="addMeet">
+							<string key="name">addMeet</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="addPlayer">
+							<string key="name">addPlayer</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="backgroundTouched:">
 							<string key="name">backgroundTouched:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="buttonClicked:">
-							<string key="name">buttonClicked:</string>
+						<object class="IBActionInfo" key="cellTouch:">
+							<string key="name">cellTouch:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="calcFinal">
-							<string key="name">calcFinal</string>
+						<object class="IBActionInfo" key="changeEvent:">
+							<string key="name">changeEvent:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="changeEdit">
-							<string key="name">changeEdit</string>
+						<object class="IBActionInfo" key="changeMeet:">
+							<string key="name">changeMeet:</string>
 							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="changeScore:">
+							<string key="name">changeScore:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="singleTapFrom:">
+							<string key="name">singleTapFrom:</string>
+							<string key="candidateClassName">UIGestureRecognizer</string>
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="antiVirus">UITextField</string>
-						<string key="antiVirus2">UITextField</string>
-						<string key="appDelegate">TeamTrackerAppDelegate</string>
-						<string key="broOther">UITextField</string>
-						<string key="broOtherRes">UITextField</string>
-						<string key="bs">UITextField</string>
-						<string key="bsRes">UITextField</string>
-						<string key="cclean">UITextField</string>
-						<string key="chrome">UITextField</string>
-						<string key="city">UITextField</string>
-						<string key="conclusion">UITextView</string>
-						<string key="defrag">UITextField</string>
-						<string key="delete1">UIBarButtonItem</string>
-						<string key="delete2">UIBarButtonItem</string>
-						<string key="driveUp">UIButton</string>
-						<string key="driveUp2">UISegmentedControl</string>
-						<string key="edit">UISwitch</string>
-						<string key="email">UITextField</string>
-						<string key="ffox">UITextField</string>
-						<string key="final">UITextField</string>
-						<string key="firewall">UITextField</string>
-						<string key="flash">UITextField</string>
-						<string key="hd">UIButton</string>
-						<string key="hd2">UISegmentedControl</string>
-						<string key="hdFreeMem">UITextField</string>
-						<string key="hdLoc">UITextField</string>
-						<string key="hdOther">UITextView</string>
-						<string key="hdOtherRes">UITextField</string>
-						<string key="hdTotMem">UITextField</string>
-						<string key="hdUseMem">UITextField</string>
-						<string key="ie">UITextField</string>
-						<string key="java">UITextField</string>
-						<string key="labor">UITextField</string>
-						<string key="malBytes">UITextField</string>
-						<string key="memTest">UIButton</string>
-						<string key="memTest2">UISegmentedControl</string>
-						<string key="modelNo">UITextField</string>
-						<string key="other">UITextView</string>
-						<string key="owner">UITextField</string>
-						<string key="parts">UITextField</string>
-						<string key="pcDiag">UIButton</string>
-						<string key="pcDiag2">UISegmentedControl</string>
-						<string key="phone">UITextField</string>
-						<string key="problem">UITextView</string>
-						<string key="progRem">UITextView</string>
-						<string key="pvStatus">UIPickerView</string>
-						<string key="reader">UITextField</string>
-						<string key="remoteID">UITextField</string>
-						<string key="remotePass">UITextField</string>
-						<string key="renewalDate">UITextField</string>
-						<string key="results1">UIView</string>
-						<string key="results2">UIView</string>
-						<string key="rootKit">UITextField</string>
-						<string key="rpStat">UIViewController</string>
-						<string key="search">UIView</string>
-						<string key="serialNo">UITextField</string>
-						<string key="softAdd">UITextView</string>
-						<string key="spyBlas">UITextField</string>
-						<string key="start">UITextField</string>
-						<string key="startDate">UITextField</string>
-						<string key="tax">UITextField</string>
-						<string key="tvStatus">UITableView</string>
-						<string key="update">UITextField</string>
-						<string key="winStress">UIButton</string>
-						<string key="winStress2">UISegmentedControl</string>
+						<string key="editPage">UIView</string>
+						<string key="name">UITextField</string>
+						<string key="tfEvent">UITextField</string>
+						<string key="tfMeet">UITextField</string>
+						<string key="tvEvent">UITableView</string>
+						<string key="tvMeet">UITableView</string>
+						<string key="tvScore">UITableView</string>
+						<string key="tvStat">UITableView</string>
+						<string key="viewPage">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="antiVirus">
-							<string key="name">antiVirus</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="antiVirus2">
-							<string key="name">antiVirus2</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="appDelegate">
-							<string key="name">appDelegate</string>
-							<string key="candidateClassName">TeamTrackerAppDelegate</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="broOther">
-							<string key="name">broOther</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="broOtherRes">
-							<string key="name">broOtherRes</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="bs">
-							<string key="name">bs</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="bsRes">
-							<string key="name">bsRes</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="cclean">
-							<string key="name">cclean</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="chrome">
-							<string key="name">chrome</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="city">
-							<string key="name">city</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="conclusion">
-							<string key="name">conclusion</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="defrag">
-							<string key="name">defrag</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="delete1">
-							<string key="name">delete1</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="delete2">
-							<string key="name">delete2</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="driveUp">
-							<string key="name">driveUp</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="driveUp2">
-							<string key="name">driveUp2</string>
-							<string key="candidateClassName">UISegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="edit">
-							<string key="name">edit</string>
-							<string key="candidateClassName">UISwitch</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="email">
-							<string key="name">email</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="ffox">
-							<string key="name">ffox</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="final">
-							<string key="name">final</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="firewall">
-							<string key="name">firewall</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="flash">
-							<string key="name">flash</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hd">
-							<string key="name">hd</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hd2">
-							<string key="name">hd2</string>
-							<string key="candidateClassName">UISegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hdFreeMem">
-							<string key="name">hdFreeMem</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hdLoc">
-							<string key="name">hdLoc</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hdOther">
-							<string key="name">hdOther</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hdOtherRes">
-							<string key="name">hdOtherRes</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hdTotMem">
-							<string key="name">hdTotMem</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hdUseMem">
-							<string key="name">hdUseMem</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="ie">
-							<string key="name">ie</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="java">
-							<string key="name">java</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="labor">
-							<string key="name">labor</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="malBytes">
-							<string key="name">malBytes</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="memTest">
-							<string key="name">memTest</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="memTest2">
-							<string key="name">memTest2</string>
-							<string key="candidateClassName">UISegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="modelNo">
-							<string key="name">modelNo</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="other">
-							<string key="name">other</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="owner">
-							<string key="name">owner</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="parts">
-							<string key="name">parts</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pcDiag">
-							<string key="name">pcDiag</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pcDiag2">
-							<string key="name">pcDiag2</string>
-							<string key="candidateClassName">UISegmentedControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="phone">
-							<string key="name">phone</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="problem">
-							<string key="name">problem</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="progRem">
-							<string key="name">progRem</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pvStatus">
-							<string key="name">pvStatus</string>
-							<string key="candidateClassName">UIPickerView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="reader">
-							<string key="name">reader</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="remoteID">
-							<string key="name">remoteID</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="remotePass">
-							<string key="name">remotePass</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="renewalDate">
-							<string key="name">renewalDate</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="results1">
-							<string key="name">results1</string>
+						<object class="IBToOneOutletInfo" key="editPage">
+							<string key="name">editPage</string>
 							<string key="candidateClassName">UIView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="results2">
-							<string key="name">results2</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="rootKit">
-							<string key="name">rootKit</string>
+						<object class="IBToOneOutletInfo" key="name">
+							<string key="name">name</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="rpStat">
-							<string key="name">rpStat</string>
-							<string key="candidateClassName">UIViewController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="search">
-							<string key="name">search</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="serialNo">
-							<string key="name">serialNo</string>
+						<object class="IBToOneOutletInfo" key="tfEvent">
+							<string key="name">tfEvent</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="softAdd">
-							<string key="name">softAdd</string>
-							<string key="candidateClassName">UITextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="spyBlas">
-							<string key="name">spyBlas</string>
+						<object class="IBToOneOutletInfo" key="tfMeet">
+							<string key="name">tfMeet</string>
 							<string key="candidateClassName">UITextField</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="start">
-							<string key="name">start</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="startDate">
-							<string key="name">startDate</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tax">
-							<string key="name">tax</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tvStatus">
-							<string key="name">tvStatus</string>
+						<object class="IBToOneOutletInfo" key="tvEvent">
+							<string key="name">tvEvent</string>
 							<string key="candidateClassName">UITableView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="update">
-							<string key="name">update</string>
-							<string key="candidateClassName">UITextField</string>
+						<object class="IBToOneOutletInfo" key="tvMeet">
+							<string key="name">tvMeet</string>
+							<string key="candidateClassName">UITableView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="winStress">
-							<string key="name">winStress</string>
-							<string key="candidateClassName">UIButton</string>
+						<object class="IBToOneOutletInfo" key="tvScore">
+							<string key="name">tvScore</string>
+							<string key="candidateClassName">UITableView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="winStress2">
-							<string key="name">winStress2</string>
-							<string key="candidateClassName">UISegmentedControl</string>
+						<object class="IBToOneOutletInfo" key="tvStat">
+							<string key="name">tvStat</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="viewPage">
+							<string key="name">viewPage</string>
+							<string key="candidateClassName">UIView</string>
 						</object>
 					</dictionary>
-					<object class="NSMutableDictionary" key="toManyOutletInfosByName">
-						<string key="NS.key.0">remoteMonth</string>
-						<object class="IBToManyOutletInfo" key="NS.object.0">
-							<string key="name">remoteMonth</string>
-							<string key="candidateClassName">UIButton</string>
-							<string key="collectionClassName">NSMutableArray</string>
-						</object>
-					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/PlayerTable.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">PlayerViewMaster</string>
-					<string key="superclassName">UINavigationController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">changeEdit</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">changeEdit</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">changeEdit</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/PlayerViewMaster.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">TeamTrackerAppDelegate</string>
-					<string key="superclassName">UIResponder</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/TeamTrackerAppDelegate.h</string>
+						<string key="minorKey">./Classes/PlayerView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -770,6 +456,67 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/TextCell.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">TimerList</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="backgroundTouched:">id</string>
+						<string key="doubleTapFrom:">UIGestureRecognizer</string>
+						<string key="gotoView">id</string>
+						<string key="singleTapFrom:">UIGestureRecognizer</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="backgroundTouched:">
+							<string key="name">backgroundTouched:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="doubleTapFrom:">
+							<string key="name">doubleTapFrom:</string>
+							<string key="candidateClassName">UIGestureRecognizer</string>
+						</object>
+						<object class="IBActionInfo" key="gotoView">
+							<string key="name">gotoView</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="singleTapFrom:">
+							<string key="name">singleTapFrom:</string>
+							<string key="candidateClassName">UIGestureRecognizer</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="dubRecog">UIGestureRecognizer</string>
+						<string key="edit">UISwitch</string>
+						<string key="pvStat">UIPickerView</string>
+						<string key="singRecog">UIGestureRecognizer</string>
+						<string key="tvStat">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="dubRecog">
+							<string key="name">dubRecog</string>
+							<string key="candidateClassName">UIGestureRecognizer</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="edit">
+							<string key="name">edit</string>
+							<string key="candidateClassName">UISwitch</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pvStat">
+							<string key="name">pvStat</string>
+							<string key="candidateClassName">UIPickerView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="singRecog">
+							<string key="name">singRecog</string>
+							<string key="candidateClassName">UIGestureRecognizer</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tvStat">
+							<string key="name">tvStat</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/TimerList.h</string>
 					</object>
 				</object>
 			</array>

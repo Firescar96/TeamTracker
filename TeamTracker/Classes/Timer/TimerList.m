@@ -1,58 +1,54 @@
 
 //
-//  PlayerList.m
+//  TimerList.m
 //  PlayerTracker
 //
 //  Created by Nchinda Fam on 1/13/13.
 //  Copyright 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import "PlayerList.h"
-#import "PlayerView.h"
-#import "PlayerNew.h"
+#import "TimerList.h"
+#import "TimerNew.h"
 
-@implementation PlayerList
+@implementation TimerList
 
 @synthesize dataMaster;
 @synthesize passedViewData;
-@synthesize passedNewData;
 @synthesize query;
 @synthesize type;
+@synthesize timerMaster;
 
 @synthesize pvStat;
 @synthesize tvStat;
 
 @synthesize foundPlay;
+@synthesize player;
 
 @synthesize singRecog;
 @synthesize dubRecog;
 
+@synthesize order;
 @synthesize edit;
 
 #pragma mark -
 #pragma mark View lifecycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     dataMaster = [[UIApplication sharedApplication] delegate];
+
     NSArray *plays = [dataMaster findPlayersinCategory:@"name" forQuery:nil];
-	edit.on = dataMaster.isEditAble;
-    
-    if (!passedViewData)
-        passedViewData =[[NSArray alloc] init];
-    
-    if (!passedNewData)
-        passedNewData =[[NSArray alloc] init];
+    edit.on = dataMaster.isEditAble;
     
 	NSManagedObject *matches = nil;
 	
 	names = [[NSMutableArray alloc] init];
-	meets = [[NSMutableArray alloc] init];
-	events = [[NSMutableArray alloc] init];
-	score = [[NSMutableArray alloc] init];
+	maxTime = [[NSMutableArray alloc] init];
+	minTime = [[NSMutableArray alloc] init];
 	
 	if ([plays count] != 0)
 	{
@@ -63,59 +59,24 @@
 			[names addObject:[matches valueForKey:@"name"]];
             //Hierarchy is as follows: [NSMutableArray*[NSMutableDictionary:(NString*)meet, (NSMutableArray*)event, (NSMutableArray*)score]]
             NSMutableArray *assign = [NSKeyedUnarchiver unarchiveObjectWithData:[matches valueForKey:@"stats"]];
-            
-			NSString *meetS = @"";
-			for (int i = 0; i < [assign count]; i++)
-            {
-				meetS = [meetS stringByAppendingFormat:@", %@", [[assign objectAtIndex:i] objectForKey:@"meet"]];
-			}
-            [meets addObject:meetS];
-            
-            NSMutableArray *eventA = [[NSMutableArray alloc] init];
-            NSString *eventS = [[NSString alloc] init];
-            bool taken;
-            for (NSMutableDictionary* outer in assign)
-            {
-                for (NSString* inner in [outer objectForKey:@"event"])
-                {
-                    taken = NO;
-                    for(NSString* event in eventA)
-                    {
-                        if([event isEqualToString:inner])
-                        {
-                            taken = YES;
-                            break;
-                        }
-                    }
-                    if(!taken)
-                        [eventA addObject:inner];
-                    
-                }
-            }
-            
-            for(NSString* event in eventA)
-            {
-                eventS = [eventS stringByAppendingString:event];
-            }
-			[events addObject:eventS];
 			
-            NSString *scoreS = [[NSString alloc] init];
             int max = 0;
             int min = 0;
             for (NSMutableDictionary* outer in assign)
             {
-                for (NSString* inner in [outer objectForKey:@"score"])
+                for (NSString* inner in [outer objectForKey:@"time"])
                 {
                     max = [inner intValue] > max ? [inner intValue] : max;
                     
                     min = [inner intValue] < min ? [inner intValue] : min;
                     
                 }
+                
+                [outer setObject:[NSString stringWithFormat:@"%i", max] forKey:@"maxTime"];
+                [outer setObject:[NSString stringWithFormat:@"%i", min] forKey:@"minTime"];
+                [maxTime addObject:[NSString stringWithFormat:@"%i", max]];
+                [minTime addObject:[NSString stringWithFormat:@"%i", min]];
             }
-            scoreS = [@"Max: " stringByAppendingString:[NSString stringWithFormat:@"%i",max]];
-            scoreS = [scoreS stringByAppendingString:@" Min: "];
-            scoreS = [scoreS stringByAppendingString:[NSString stringWithFormat:@"%i",min]];
-			[score addObject:scoreS];
 		}
 	}
     
@@ -143,58 +104,17 @@
         
         [self findPlayer:query];
     }
+
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(IBAction) gotoNew
 {
-    if([[segue destinationViewController] isKindOfClass:[PlayerView class]])
-    {
-        PlayerView *newView = [segue destinationViewController];
-        
-        if([tvStat indexPathForSelectedRow] == nil)
-            [newView setPassedValue:[[NSArray alloc] initWithObjects:@"list",
-                                     passedNewData,
-                                     query,
-                                     type,
-                                     nil] andValue:passedViewData];
-        else
-        {
-            int curPlayer = [[tvStat indexPathForSelectedRow] section];
-            [newView setPassedValue:[[NSArray alloc] initWithObjects:@"list",
-                                     passedNewData,
-                                     query,
-                                     type,
-                                     [names objectAtIndex:curPlayer],
-                                     nil] andValue:passedViewData];
-        }
-    }
-    else if([[segue destinationViewController] isKindOfClass:[PlayerNew class]])
-    {
-        PlayerNew *newView = (PlayerNew*)[segue destinationViewController];
-        [newView setPassedValue:[[NSArray alloc] initWithObjects:@"list",
-                                 passedViewData,
-                                 nil] andValue:passedNewData];
-    }
+    [timerMaster performSelector:@selector(gotoNew)];
 }
 
--(void)setPassedValue:(NSArray *)mine andValue:(NSArray *)yours
+-(IBAction) gotoView
 {
-    if([@"view" isEqualToString:[mine objectAtIndex:0]])
-    {
-        passedViewData = mine;
-        passedNewData = [mine objectAtIndex:1];
-    }
-    else if([@"new" isEqualToString:[mine objectAtIndex:0]])
-    {
-        passedNewData = mine;
-        passedViewData = [mine objectAtIndex:1];
-    }
-    
-    if (yours.count > 2)
-    {
-        query = [yours objectAtIndex:2];
-        type = [yours objectAtIndex:3];
-    }
+    [timerMaster performSelector:@selector(gotoView)];
 }
 
 -(IBAction)backgroundTouched:(id)sender
@@ -224,15 +144,15 @@
 			type = @"name";
 			break;
 	}
+	
 	NSArray *array = [dataMaster findPlayersinCategory:type forQuery:query];
 	
 	NSManagedObject *matches = nil;
 	
 	//clear Table
 	[names removeAllObjects];
-	[meets removeAllObjects];
-	[events removeAllObjects];
-	[score removeAllObjects];
+	[maxTime removeAllObjects];
+	[minTime removeAllObjects];
 	[tvStat reloadData];
 	
 	if ([array count] == 0)
@@ -240,83 +160,55 @@
 		foundPlay = nil;
 		
 		[names addObject:@"Player Non-existant"];
-		[meets addObject:@"Search a \" \" to get a list of all"];
-		[events addObject:@"the Players,"];
-		[score addObject:@"or make your search less refined."];
+		[maxTime addObject:@"Search a \" \" to get a list of all"];
+		[minTime addObject:@"the Players,"];
 	} else
 	{
 		foundPlay = [[NSMutableArray alloc] initWithArray:array];
-		for (int i = 0; i < [array count]; i++)
+        
+        if ([@"Name ▼" isEqualToString:[order titleForSegmentAtIndex:[order selectedSegmentIndex]]])
+        {
+            NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+            [foundPlay sortUsingDescriptors:[NSArray arrayWithObject:sort]];
+        }
+        
+        if ([@"Name ▲" isEqualToString:[order titleForSegmentAtIndex:[order selectedSegmentIndex]]])
+        {
+            NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:NO];
+            [foundPlay sortUsingDescriptors:[NSArray arrayWithObject:sort]];
+        }
+        
+		for (int i = 0; i < [foundPlay count]; i++)
 		{
-			matches = [array objectAtIndex:i];
+			matches = [foundPlay objectAtIndex:i];
 			[names addObject:[matches valueForKey:@"name"]];
-			
-            //Hierarchy is as follows: [NSMutableArray*[NSMutableDictionary:meet, (NSMutableArray*)event, (NSMutableArray*)score]]
+            //Hierarchy is as follows: [NSMutableArray*[NSMutableDictionary:(NString*)meet, (NSMutableArray*)event, (NSMutableArray*)score]]
             NSMutableArray *assign = [NSKeyedUnarchiver unarchiveObjectWithData:[matches valueForKey:@"stats"]];
-            /*NSMutableArray * temp = [[NSMutableArray alloc] init];
-            [temp addObject:[[NSMutableDictionary alloc] init]];
-            [((NSMutableDictionary*)[temp lastObject]) setObject:@"nchindaaaaa" forKey:@"meet"];
-            [((NSMutableDictionary*)[temp lastObject]) setObject:[[NSMutableArray alloc] init] forKey:@"event"];
-            [((NSMutableDictionary*)[temp lastObject]) setObject:[[NSMutableArray alloc] init] forKey:@"score"];
-            [dataMaster updatePlayer:@"nchindaaaaa" withStats:temp];*/
-			NSString *meetS = [[NSString alloc] init];
-			for (int i = 0; i < [assign count]; i++)
-            {
-				meetS = [meetS stringByAppendingFormat:@"%@, ", [[assign objectAtIndex:i] objectForKey:@"meet"]];
-			}
-            if([meetS length] >= 2)
-                meetS = [meetS substringToIndex:[meetS length]-2];
-            [meets addObject:meetS];
-            
-            NSMutableArray *eventA = [[NSMutableArray alloc] init];
-            NSString *eventS = [[NSString alloc] init];
-            bool taken;
-            for (NSMutableDictionary* outer in assign)
-            {
-                for (NSString* inner in [outer objectForKey:@"event"])
-                {
-                    taken = NO;
-                    for(NSString* event in eventA)
-                    {
-                        if([event isEqualToString:inner])
-                        {
-                            taken = YES;
-                            break;
-                        }
-                    }
-                    if(!taken)
-                        [eventA addObject:inner];
-                    
-                }
-            }
-            
-            for(NSString* event in eventA)
-            {
-                eventS = [eventS stringByAppendingFormat:@"%@, ", event];
-            }
-            if([eventS length] >= 2)
-                eventS = [eventS substringToIndex:[eventS length]-2];
-			[events addObject:eventS];
 			
-            NSString *scoreS = [[NSString alloc] init];
             int max = 0;
             int min = 0;
             for (NSMutableDictionary* outer in assign)
             {
-                for (NSString* inner in [outer objectForKey:@"score"])
+                for (NSDictionary* inner in [outer objectForKey:@"time"])
                 {
-                    max = [inner intValue] > max ? [inner intValue] : max;
+                    NSString *time = [inner objectForKey:@"time"];
+                    max = [time intValue] > max ? [time intValue] : max;
                     
-                    min = [inner intValue] < min ? [inner intValue] : min;
-                    
+                    if (min == 0)
+                        min = [time intValue];
+                    else
+                        min = [time intValue] < min ? [time intValue] : min;
                 }
+                
+                [outer setObject:[NSString stringWithFormat:@"%i", max] forKey:@"maxTime"];
+                [outer setObject:[NSString stringWithFormat:@"%i", min] forKey:@"minTime"];
             }
-            scoreS = [@"Max: " stringByAppendingString:[NSString stringWithFormat:@"%i",max]];
-            scoreS = [scoreS stringByAppendingString:@" Min: "];
-            scoreS = [scoreS stringByAppendingString:[NSString stringWithFormat:@"%i",min]];
-			[score addObject:scoreS];
+            [maxTime addObject:[NSString stringWithFormat:@"%i", max]];
+            [minTime addObject:[NSString stringWithFormat:@"%i", min]];
 		}
+
 	}
+    
 	[tvStat reloadData];
     [tvStat deselectRowAtIndexPath:[tvStat indexPathForSelectedRow] animated:YES];
 }
@@ -337,7 +229,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+    return 3;
 }
 
 
@@ -384,8 +276,8 @@
 		UIColor *foreColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
 		cell.textLabel.textColor = foreColor;
 		
-		cell.textLabel.text = [NSString stringWithFormat:@"Meets: %@",
-							   [meets objectAtIndex:[indexPath section]]];
+		cell.textLabel.text = [NSString stringWithFormat:@"Max Time: %@",
+							   [maxTime objectAtIndex:[indexPath section]]];
 	}
     else if ([indexPath row] == 2)
 	{
@@ -396,19 +288,8 @@
 		UIColor *foreColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
 		cell.textLabel.textColor = foreColor;
 		
-		cell.textLabel.text = [NSString stringWithFormat:@"Events: %@",
-							   [events objectAtIndex:[indexPath section]]];
-	}
-	else if ([indexPath row] == 3)
-	{
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		
-		UIColor *backColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
-        cell.backgroundColor = backColor;
-		UIColor *foreColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-		cell.textLabel.textColor = foreColor;
-		cell.textLabel.text = [NSString stringWithFormat:@"Score: %@",
-							   [score objectAtIndex:[indexPath section] ]];
+		cell.textLabel.text = [NSString stringWithFormat:@"Min Time: %@",
+							   [minTime objectAtIndex:[indexPath section]]];
 	}
 	
     return cell;
@@ -438,13 +319,18 @@
 }
 
 #pragma mark Table view Gestures
-
 -(IBAction)singleTapFrom:(UIGestureRecognizer *)tapRecog
 {
     CGPoint tapLoc = [tapRecog locationInView:tvStat];
     NSIndexPath *tapPath = [tvStat indexPathForRowAtPoint:tapLoc];
     NSIndexPath *seleRow = [tvStat indexPathForSelectedRow];
     
+    if([dataMaster isEditAble])
+        player = ((TextCell*)[tvStat cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:tapPath.section]]).textBox.text;
+    else
+        player = [tvStat cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:tapPath.section]].textLabel.text;
+    
+    NSLog(player);
     if (seleRow == nil )
     {}
     else if([seleRow section] != [tapPath section])
@@ -453,8 +339,7 @@
         return;
     else if([seleRow section] == [tapPath section])
         if([names count] > 0)
-            [self performSegueWithIdentifier:@"list2view" sender:nil];
-    
+            [self gotoView];
     if(!tapPath)
         [self.view endEditing:YES];
     
@@ -467,6 +352,11 @@
     NSIndexPath *tapPath = [tvStat indexPathForRowAtPoint:tapLoc];
     NSIndexPath *seleRow = [tvStat indexPathForSelectedRow];
     
+    if([dataMaster isEditAble])
+        player = ((TextCell*)[tvStat cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:tapPath.section]]).textBox.text;
+    else
+        player = [tvStat cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:tapPath.section]].textLabel.text;
+    
     if(!tapPath)
         [self.view endEditing:YES];
     
@@ -476,16 +366,19 @@
     {}
     else
     {
+        if ([seleRow length] == 0)
+            return;
+        
         if([seleRow section] != [tapPath section])
             [self tableView:tvStat didDeselectRowAtIndexPath:seleRow];
-
-        if([names count] > 0)
-            [self performSegueWithIdentifier:@"list2view" sender:nil];
+        
+        if([seleRow section] == [tapPath section])
+            if([names count] > 0)
+                [self gotoView];
     }
 }
 
 #pragma mark Picker view delegate
-
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
 	//One column
@@ -501,16 +394,6 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
 	return (NSString *)[status objectAtIndex:row];
-}
-
-#pragma mark PlayerView
-
--(IBAction) changeEdit
-{
-    if ([edit isOn])
-        dataMaster.editAble = YES;
-    else
-        dataMaster.editAble = NO;
 }
 
 @end

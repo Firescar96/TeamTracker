@@ -1,5 +1,5 @@
 //
-//  PlayerNameList.h
+//  PlayerMeetList.h
 //  TeamTracker
 //
 //  Created by Nchinda Fam on 7/20/13.
@@ -10,10 +10,10 @@
 #import <QuartzCore/QuartzCore.h>
 #import "TeamTrackerAppDelegate.h"
 
-@interface PlayerNameList : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface PlayerMeetList : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     TeamTrackerAppDelegate *dataMaster;
-    NSMutableArray *foundPlayers;
+    NSMutableArray *foundMeets;
     
     UIViewController *presenting;
     
@@ -24,7 +24,7 @@
     NSString *meet;
 }
 @property (nonatomic, retain) TeamTrackerAppDelegate *dataMaster;
-@property (nonatomic, retain) NSMutableArray *foundPlayers;
+@property (nonatomic, retain) NSMutableArray *foundMeets;
 
 @property (nonatomic, retain) UIViewController *presenting;
 

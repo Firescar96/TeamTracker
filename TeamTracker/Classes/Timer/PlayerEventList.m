@@ -1,17 +1,18 @@
 //
-//  PlayerNameList.m
+//  PlayerEventList.m
 //  TeamTracker
 //
 //  Created by Nchinda Fam on 7/20/13.
 //  Copyright (c) 2013 Plum. All rights reserved.
 //
 
-#import "PlayerNameList.h"
+#import "PlayerEventList.h"
 
-@implementation PlayerNameList
+@implementation PlayerEventList
 
 @synthesize dataMaster;
-@synthesize foundPlayers;
+@synthesize foundMeets;
+@synthesize foundEvents;
 
 @synthesize presenting;
 
@@ -20,16 +21,27 @@
 
 @synthesize name;
 @synthesize meet;
+@synthesize event;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    foundEvents = [[NSMutableArray alloc] init];
     dataMaster = [[UIApplication sharedApplication] delegate];
-    foundPlayers = [[NSMutableArray alloc] initWithArray:[dataMaster findPlayersinCategory:@"name" forQuery:@" "]];
-    [foundPlayers insertObject:@"New Player" atIndex:0];
+    NSArray *foundPlayers = [dataMaster findPlayersinCategory:@"name" forQuery:name];
+    if (foundPlayers.count > 0)
+    {
+        foundMeets = [NSKeyedUnarchiver unarchiveObjectWithData:[[foundPlayers objectAtIndex:0] valueForKey:@"stats"]];
+        
+        for (NSDictionary *stat in foundMeets)
+        {
+            if ([meet isEqualToString:[stat valueForKey:@"meet"]])
+                [foundEvents setArray:[stat valueForKey:@"event"]];
+        }
+    }
     
-    tvStat.clearsContextBeforeDrawing = NO;
+    [foundEvents insertObject:@"New Event" atIndex:0];
+    
     [tvStat reloadData];
     [self tableView:tvStat didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
 }
@@ -46,7 +58,7 @@
         if (tfPlay.text == nil || [tfPlay.text isEqualToString: @""] || [tfPlay.text isEqualToString: @" "])
         {
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Paradoxical Selection"
-                                                           message: @"You selected New Player but haven't given the player a name"
+                                                           message: @"You selected New Meet but haven't given the meet a name"
                                                           delegate: nil
                                                  cancelButtonTitle:nil
                                                  otherButtonTitles:@"OK",nil];
@@ -55,11 +67,10 @@
             [alert show];
             return;
         }
-        name = tfPlay.text;
+        event = tfPlay.text;
     }
     else
-        name = [tvStat cellForRowAtIndexPath:tvStat.indexPathForSelectedRow].textLabel.text;
-    
+        event = [tvStat cellForRowAtIndexPath:tvStat.indexPathForSelectedRow].textLabel.text;
     [presenting performSelector:@selector(savePlayer:) withObject:self];
 }
 
@@ -67,7 +78,18 @@
 {
     if ([[tvStat indexPathForSelectedRow] row] == 0)
     {
-        [dataMaster saveNewPlayer:name withStats:[[NSMutableArray alloc] init]];
+        [foundEvents removeObjectAtIndex:0];
+        [foundEvents addObject:event];
+        
+        for (NSDictionary *stat in foundMeets)
+        {
+            if ([meet isEqualToString:[stat valueForKey:@"meet"]])
+                [stat setValue:foundEvents forKey:@"event"];
+            
+            break;
+        }
+        
+        [dataMaster updatePlayer:name withStats:foundMeets];
     }
 }
 
@@ -76,7 +98,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [foundPlayers count];
+    return [foundEvents count];
 }
 
 // Customize the appearance of table view cells.
@@ -103,10 +125,7 @@
     UIColor *foreColor = [UIColor colorWithRed:0 green:.5 blue:1 alpha:1];
     cell.textLabel.textColor = foreColor;
     
-    if (indexPath.row == 0)
-        cell.textLabel.text = [foundPlayers objectAtIndex:indexPath.row];
-    else
-        cell.textLabel.text = [[foundPlayers objectAtIndex:indexPath.row] valueForKey:@"name"];
+    cell.textLabel.text = [foundEvents objectAtIndex:indexPath.row];
 	
     return cell;
 }

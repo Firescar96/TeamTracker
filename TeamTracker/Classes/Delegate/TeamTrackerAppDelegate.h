@@ -30,7 +30,8 @@
 
 - (NSURL *)applicationDocumentsDirectory;
 
--(void) saveNewPlayer:(NSString*)name withStats:(NSMutableArray*)stats;
+-(void) saveNewPlayer:(NSString*)name withStats:(NSArray*)stats;
+-(void) updatePlayer:(NSString*)name withStats:(NSArray*)stats;
 -(NSArray*) findPlayersinCategory:(NSString *)category forQuery:(NSString *)query;
 
 @end

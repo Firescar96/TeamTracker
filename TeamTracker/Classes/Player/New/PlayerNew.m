@@ -121,6 +121,18 @@
 {
 	[self backgroundTouched:nil];
 	
+    for (NSMutableDictionary *play in assign)
+    {
+        if ([[name text] isEqualToString:[play objectForKey:@"name"]]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Paradoxical Future"
+                                                            message:@"A Player with the selected name already exits"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"10-4"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
+    }
     
 	[dataMaster saveNewPlayer:[name text] withStats:assign];
 	
@@ -149,11 +161,6 @@
     [tvMeet reloadData];
 }
 
--(IBAction) changeMeet:(id)sender
-{
-    [((NSMutableDictionary*)[assign objectAtIndex:curMeet]) setObject:[((UITextField*)sender) text] forKey:@"meet"];
-}
-
 -(IBAction) addEvent
 {
     if(curMeet < 0)
@@ -168,8 +175,15 @@
     [tvScore reloadData];
 }
 
--(IBAction) changeEvent:(id)sender
+-(IBAction) changeStat:(id)sender
 {
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:curMeet];
+    if (sender == [((TextCell*)[tvMeet cellForRowAtIndexPath:path]) textBox])
+    {
+        [((NSMutableDictionary*)[assign objectAtIndex:curMeet]) setObject:[((UITextField*)sender) text] forKey:@"meet"];
+        return;
+    }
     
     for (int i = 0; i < [assign count]; i++)
     {
@@ -178,13 +192,10 @@
         if (sender == [((TextCell*)[tvEvent cellForRowAtIndexPath:path]) textBox])
         {
             [[[assign objectAtIndex:curMeet] objectForKey:@"event"] setObject:[((UITextField*)sender) text] atIndex:i];
-            break;
+            return;
         }
     }
-}
-
--(IBAction) changeScore:(id)sender
-{
+    
     for (int i = 0; i < [assign count]; i++)
     {
         NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:i];
@@ -192,7 +203,7 @@
         if (sender == [((TextCell*)[tvScore cellForRowAtIndexPath:path]) textBox])
         {
             [[[assign objectAtIndex:curMeet] objectForKey:@"score"] setObject:[((UITextField*)sender) text] atIndex:i];
-            break;
+            return;
         }
     }
 }

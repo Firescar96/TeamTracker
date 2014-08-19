@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		2A171E60179B67D20071C579 /* PlayerNameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A171E5E179B67D20071C579 /* PlayerNameList.m */; };
 		2A171E61179B67D20071C579 /* PlayerNameList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A171E5F179B67D20071C579 /* PlayerNameList.xib */; };
+		2A171E67179C9FE50071C579 /* PlayerMeetList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A171E65179C9FE40071C579 /* PlayerMeetList.m */; };
+		2A171E68179C9FE50071C579 /* PlayerMeetList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A171E66179C9FE50071C579 /* PlayerMeetList.xib */; };
 		2A1798041789F6420059B4D7 /* UIDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1798031789F6420059B4D7 /* UIDropDownMenu.m */; };
 		2A179807178A09970059B4D7 /* FlipLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A179806178A09970059B4D7 /* FlipLeftSegue.m */; };
 		2A17980D178A0C770059B4D7 /* FlipRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A17980C178A0C770059B4D7 /* FlipRightSegue.m */; };
 		2A1C5A621784A1D40000D451 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1C5A611784A1D40000D451 /* TextCell.xib */; };
 		2A1C5A651784A7440000D451 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C5A641784A7440000D451 /* TextCell.m */; };
 		2A371C6F178A494900E03190 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A371C6E178A494900E03190 /* PlayerView.m */; };
+		2A37AA3717A34464008770E4 /* TimerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AA3617A34464008770E4 /* TimerList.m */; };
+		2A37AA3A17A3604C008770E4 /* TimerNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AA3917A3604B008770E4 /* TimerNavigation.m */; };
 		2A7E8FBD1798FF1400D2FD92 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */; };
 		2AC8FF151778DC02007C9800 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC8FF141778DC02007C9800 /* libc++abi.dylib */; };
 		2ACA4C12177246EC00F3B3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACA4C11177246EC00F3B3F0 /* UIKit.framework */; };
@@ -26,6 +30,8 @@
 		2ACA4C4E177246EC00F3B3F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ACA4C4C177246EC00F3B3F0 /* InfoPlist.strings */; };
 		2ACA4C51177246EC00F3B3F0 /* TeamTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA4C50177246EC00F3B3F0 /* TeamTrackerTests.m */; };
 		2AE0344F17780A60009C3B39 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE0344E17780A60009C3B39 /* CoreData.framework */; };
+		2AE2A5DF17A07270003B386F /* PlayerEventList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2A5DD17A07270003B386F /* PlayerEventList.m */; };
+		2AE2A5E017A07270003B386F /* PlayerEventList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE2A5DE17A07270003B386F /* PlayerEventList.xib */; };
 		2AEB4BAC1779682C0095C2FA /* TeamTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AEB4BAA1779682B0095C2FA /* TeamTracker.xcdatamodeld */; };
 		2AF34FD31778056400E646D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FA71778056400E646D9 /* Default-568h@2x.png */; };
 		2AF34FD41778056400E646D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FA81778056400E646D9 /* Default.png */; };
@@ -41,12 +47,14 @@
 		2AF34FE11778056400E646D9 /* PlayerNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC01778056400E646D9 /* PlayerNew.m */; };
 		2AF34FE31778056400E646D9 /* TimerRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC51778056400E646D9 /* TimerRow.m */; };
 		2AF34FE41778056400E646D9 /* TimerRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FC61778056400E646D9 /* TimerRow.xib */; };
-		2AF34FE51778056400E646D9 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC81778056400E646D9 /* TimerView.m */; };
+		2AF34FE51778056400E646D9 /* TimerNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FC81778056400E646D9 /* TimerNew.m */; };
 		2AF34FE61778056400E646D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FCA1778056400E646D9 /* InfoPlist.strings */; };
 		2AF34FE71778056400E646D9 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FCC1778056400E646D9 /* MainStoryboard_iPad.storyboard */; };
 		2AF34FE81778056400E646D9 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FCE1778056400E646D9 /* MainStoryboard_iPhone.storyboard */; };
 		2AF34FE91778056400E646D9 /* TeamTracker-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */; };
 		2AF34FEA1778056400E646D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF34FD11778056400E646D9 /* main.m */; };
+		2AF4332517AF5A7600A3AB57 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4332417AF5A7600A3AB57 /* TimerView.m */; };
+		2AFF2D7B17ACD54A00092FE7 /* OrderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF2D7A17ACD54A00092FE7 /* OrderControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,9 @@
 		2A171E5D179B67D20071C579 /* PlayerNameList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerNameList.h; sourceTree = "<group>"; };
 		2A171E5E179B67D20071C579 /* PlayerNameList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerNameList.m; sourceTree = "<group>"; };
 		2A171E5F179B67D20071C579 /* PlayerNameList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerNameList.xib; sourceTree = "<group>"; };
+		2A171E64179C9FE40071C579 /* PlayerMeetList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMeetList.h; sourceTree = "<group>"; };
+		2A171E65179C9FE40071C579 /* PlayerMeetList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMeetList.m; sourceTree = "<group>"; };
+		2A171E66179C9FE50071C579 /* PlayerMeetList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerMeetList.xib; sourceTree = "<group>"; };
 		2A1798021789F6420059B4D7 /* UIDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDropDownMenu.h; path = "TeamTracker/Classes/DropDown Menu/UIDropDownMenu.h"; sourceTree = SOURCE_ROOT; };
 		2A1798031789F6420059B4D7 /* UIDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDropDownMenu.m; path = "TeamTracker/Classes/DropDown Menu/UIDropDownMenu.m"; sourceTree = SOURCE_ROOT; };
 		2A179805178A09970059B4D7 /* FlipLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipLeftSegue.h; path = TeamTracker/Classes/Common/FlipLeftSegue.h; sourceTree = SOURCE_ROOT; };
@@ -74,6 +85,10 @@
 		2A1C5A641784A7440000D451 /* TextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextCell.m; path = New/TextCell.m; sourceTree = "<group>"; };
 		2A371C6D178A494900E03190 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerView.h; path = View/PlayerView.h; sourceTree = "<group>"; };
 		2A371C6E178A494900E03190 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerView.m; path = View/PlayerView.m; sourceTree = "<group>"; };
+		2A37AA3517A34464008770E4 /* TimerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerList.h; sourceTree = "<group>"; };
+		2A37AA3617A34464008770E4 /* TimerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerList.m; sourceTree = "<group>"; };
+		2A37AA3817A3604B008770E4 /* TimerNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerNavigation.h; sourceTree = "<group>"; };
+		2A37AA3917A3604B008770E4 /* TimerNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerNavigation.m; sourceTree = "<group>"; };
 		2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2AC8FF141778DC02007C9800 /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
 		2ACA4C0E177246EC00F3B3F0 /* TeamTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +102,9 @@
 		2ACA4C4F177246EC00F3B3F0 /* TeamTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamTrackerTests.h; sourceTree = "<group>"; };
 		2ACA4C50177246EC00F3B3F0 /* TeamTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamTrackerTests.m; sourceTree = "<group>"; };
 		2AE0344E17780A60009C3B39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2AE2A5DC17A07270003B386F /* PlayerEventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerEventList.h; sourceTree = "<group>"; };
+		2AE2A5DD17A07270003B386F /* PlayerEventList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerEventList.m; sourceTree = "<group>"; };
+		2AE2A5DE17A07270003B386F /* PlayerEventList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerEventList.xib; sourceTree = "<group>"; };
 		2AEB4BAB1779682C0095C2FA /* TeamTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeamTracker.xcdatamodel; sourceTree = "<group>"; };
 		2AF34FA71778056400E646D9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2AF34FA81778056400E646D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -108,14 +126,18 @@
 		2AF34FC41778056400E646D9 /* TimerRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerRow.h; sourceTree = "<group>"; };
 		2AF34FC51778056400E646D9 /* TimerRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerRow.m; sourceTree = "<group>"; };
 		2AF34FC61778056400E646D9 /* TimerRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerRow.xib; sourceTree = "<group>"; };
-		2AF34FC71778056400E646D9 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
-		2AF34FC81778056400E646D9 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
+		2AF34FC71778056400E646D9 /* TimerNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerNew.h; sourceTree = "<group>"; };
+		2AF34FC81778056400E646D9 /* TimerNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerNew.m; sourceTree = "<group>"; };
 		2AF34FCB1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		2AF34FCD1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		2AF34FCD1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		2AF34FCF1778056400E646D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		2AF34FD01778056400E646D9 /* TeamTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TeamTracker-Info.plist"; sourceTree = "<group>"; };
 		2AF34FD11778056400E646D9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AF34FD21778056400E646D9 /* TeamTracker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TeamTracker-Prefix.pch"; sourceTree = "<group>"; };
+		2AF4332317AF5A7600A3AB57 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
+		2AF4332417AF5A7600A3AB57 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
+		2AFF2D7917ACD54900092FE7 /* OrderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderControl.h; sourceTree = "<group>"; };
+		2AFF2D7A17ACD54A00092FE7 /* OrderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,10 +215,33 @@
 			name = New;
 			sourceTree = "<group>";
 		};
+		2A37AA3417A3440C008770E4 /* TimerList */ = {
+			isa = PBXGroup;
+			children = (
+				2A37AA3517A34464008770E4 /* TimerList.h */,
+				2A37AA3617A34464008770E4 /* TimerList.m */,
+				2AFF2D7917ACD54900092FE7 /* OrderControl.h */,
+				2AFF2D7A17ACD54A00092FE7 /* OrderControl.m */,
+			);
+			name = TimerList;
+			sourceTree = "<group>";
+		};
+		2A37AA3B17A360C0008770E4 /* TimerNew */ = {
+			isa = PBXGroup;
+			children = (
+				2AE2A5E117A07D4F003B386F /* SavePopup */,
+				2AF34FC41778056400E646D9 /* TimerRow.h */,
+				2AF34FC51778056400E646D9 /* TimerRow.m */,
+				2AF34FC61778056400E646D9 /* TimerRow.xib */,
+				2AF34FC71778056400E646D9 /* TimerNew.h */,
+				2AF34FC81778056400E646D9 /* TimerNew.m */,
+			);
+			name = TimerNew;
+			sourceTree = "<group>";
+		};
 		2ACA4C05177246EC00F3B3F0 = {
 			isa = PBXGroup;
 			children = (
-				2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */,
 				2ACA4C17177246EC00F3B3F0 /* TeamTracker */,
 				2ACA4C49177246EC00F3B3F0 /* TeamTrackerTests */,
 				2ACA4C10177246EC00F3B3F0 /* Frameworks */,
@@ -217,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				2AC8FF141778DC02007C9800 /* libc++abi.dylib */,
+				2A7E8FBC1798FF1400D2FD92 /* QuartzCore.framework */,
 				2AE0344E17780A60009C3B39 /* CoreData.framework */,
 				2ACA4C11177246EC00F3B3F0 /* UIKit.framework */,
 				2ACA4C13177246EC00F3B3F0 /* Foundation.framework */,
@@ -257,6 +303,22 @@
 				2ACA4C4C177246EC00F3B3F0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AE2A5E117A07D4F003B386F /* SavePopup */ = {
+			isa = PBXGroup;
+			children = (
+				2A171E5D179B67D20071C579 /* PlayerNameList.h */,
+				2A171E5E179B67D20071C579 /* PlayerNameList.m */,
+				2A171E5F179B67D20071C579 /* PlayerNameList.xib */,
+				2A171E64179C9FE40071C579 /* PlayerMeetList.h */,
+				2A171E65179C9FE40071C579 /* PlayerMeetList.m */,
+				2A171E66179C9FE50071C579 /* PlayerMeetList.xib */,
+				2AE2A5DC17A07270003B386F /* PlayerEventList.h */,
+				2AE2A5DD17A07270003B386F /* PlayerEventList.m */,
+				2AE2A5DE17A07270003B386F /* PlayerEventList.xib */,
+			);
+			name = SavePopup;
 			sourceTree = "<group>";
 		};
 		2AF34FA61778056400E646D9 /* imgs */ = {
@@ -306,14 +368,11 @@
 		2AF34FC31778056400E646D9 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				2AF34FC41778056400E646D9 /* TimerRow.h */,
-				2AF34FC51778056400E646D9 /* TimerRow.m */,
-				2AF34FC61778056400E646D9 /* TimerRow.xib */,
-				2AF34FC71778056400E646D9 /* TimerView.h */,
-				2AF34FC81778056400E646D9 /* TimerView.m */,
-				2A171E5D179B67D20071C579 /* PlayerNameList.h */,
-				2A171E5E179B67D20071C579 /* PlayerNameList.m */,
-				2A171E5F179B67D20071C579 /* PlayerNameList.xib */,
+				2AF4332217AF5A1600A3AB57 /* TimerView */,
+				2A37AA3B17A360C0008770E4 /* TimerNew */,
+				2A37AA3417A3440C008770E4 /* TimerList */,
+				2A37AA3817A3604B008770E4 /* TimerNavigation.h */,
+				2A37AA3917A3604B008770E4 /* TimerNavigation.m */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -326,6 +385,15 @@
 				2AF34FCC1778056400E646D9 /* MainStoryboard_iPad.storyboard */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		2AF4332217AF5A1600A3AB57 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				2AF4332317AF5A7600A3AB57 /* TimerView.h */,
+				2AF4332417AF5A7600A3AB57 /* TimerView.m */,
+			);
+			name = TimerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +481,8 @@
 				2AF34FE91778056400E646D9 /* TeamTracker-Info.plist in Resources */,
 				2A1C5A621784A1D40000D451 /* TextCell.xib in Resources */,
 				2A171E61179B67D20071C579 /* PlayerNameList.xib in Resources */,
+				2A171E68179C9FE50071C579 /* PlayerMeetList.xib in Resources */,
+				2AE2A5E017A07270003B386F /* PlayerEventList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +523,7 @@
 				2AF34FE01778056400E646D9 /* PlayerSearch.m in Sources */,
 				2AF34FE11778056400E646D9 /* PlayerNew.m in Sources */,
 				2AF34FE31778056400E646D9 /* TimerRow.m in Sources */,
-				2AF34FE51778056400E646D9 /* TimerView.m in Sources */,
+				2AF34FE51778056400E646D9 /* TimerNew.m in Sources */,
 				2AF34FEA1778056400E646D9 /* main.m in Sources */,
 				2AEB4BAC1779682C0095C2FA /* TeamTracker.xcdatamodeld in Sources */,
 				2A1C5A651784A7440000D451 /* TextCell.m in Sources */,
@@ -462,6 +532,12 @@
 				2A17980D178A0C770059B4D7 /* FlipRightSegue.m in Sources */,
 				2A371C6F178A494900E03190 /* PlayerView.m in Sources */,
 				2A171E60179B67D20071C579 /* PlayerNameList.m in Sources */,
+				2A171E67179C9FE50071C579 /* PlayerMeetList.m in Sources */,
+				2AE2A5DF17A07270003B386F /* PlayerEventList.m in Sources */,
+				2A37AA3717A34464008770E4 /* TimerList.m in Sources */,
+				2A37AA3A17A3604C008770E4 /* TimerNavigation.m in Sources */,
+				2AFF2D7B17ACD54A00092FE7 /* OrderControl.m in Sources */,
+				2AF4332517AF5A7600A3AB57 /* TimerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

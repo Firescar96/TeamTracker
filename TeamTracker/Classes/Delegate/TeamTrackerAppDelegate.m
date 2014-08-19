@@ -63,7 +63,7 @@
 
 #pragma mark -
 
--(void) saveNewPlayer:(NSString*)name withStats:(NSMutableArray*)stats;
+-(void) saveNewPlayer:(NSString*)name withStats:(NSArray*)stats;
 {
 	
 	NSManagedObjectContext *context = self.managedObjectContext;
@@ -81,6 +81,25 @@
 	[context save:&error];
 }
 
+-(void) updatePlayer:(NSString*)name withStats:(NSArray*)stats
+{
+	
+    NSArray *oldPlayer = [self findPlayersinCategory:@"name" forQuery:name];
+    if (oldPlayer.count == 0)
+        return;
+    
+    NSManagedObject *newPlayer = [oldPlayer objectAtIndex:0];
+	
+	NSManagedObjectContext *moc = self.managedObjectContext;
+	
+	NSData *statData = [NSKeyedArchiver archivedDataWithRootObject:stats];
+	
+	[newPlayer setValue:name forKey:@"name"];
+	[newPlayer setValue:statData forKey:@"stats"];
+	
+	NSError *error;
+	[moc save:&error];
+}
 
 -(NSArray*) findPlayersinCategory:(NSString *)category forQuery:(NSString *)query
 {

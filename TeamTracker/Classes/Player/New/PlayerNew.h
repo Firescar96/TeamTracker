@@ -48,10 +48,8 @@
 -(IBAction) backgroundTouched:(id)sender;
 -(IBAction) addPlayer;
 -(IBAction) addMeet;
--(IBAction) changeMeet:(id)sender;
 -(IBAction) addEvent;
--(IBAction) changeEvent:(id)sender;
--(IBAction) changeScore:(id)sender;
+-(IBAction) changeStat:(id)sender;
 
 -(IBAction)cellTouch:(id)sender;
 

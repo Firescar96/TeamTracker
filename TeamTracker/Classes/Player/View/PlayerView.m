@@ -106,6 +106,7 @@
             {
                 [meets addObject:[[assign objectAtIndex:i] objectForKey:@"meet"]];
             }
+        break;
         }
         
         [tvStat reloadData];
@@ -214,10 +215,7 @@
 {
 	[self backgroundTouched:nil];
 	
-    
-	[dataMaster saveNewPlayer:[name text] withStats:assign];
-	
-    [assign removeAllObjects];
+	[dataMaster updatePlayer:[name text] withStats:assign];
     
     curMeet = -1;
     [tvMeet reloadData];
@@ -261,8 +259,15 @@
     [tvScore reloadData];
 }
 
--(IBAction) changeEvent:(id)sender
+-(IBAction) changeStat:(id)sender
 {
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:curMeet];
+    if (sender == [((TextCell*)[tvMeet cellForRowAtIndexPath:path]) textBox])
+    {
+        [((NSMutableDictionary*)[assign objectAtIndex:curMeet]) setObject:[((UITextField*)sender) text] forKey:@"meet"];
+        return;
+    }
     
     for (int i = 0; i < [assign count]; i++)
     {
@@ -271,13 +276,10 @@
         if (sender == [((TextCell*)[tvEvent cellForRowAtIndexPath:path]) textBox])
         {
             [[[assign objectAtIndex:curMeet] objectForKey:@"event"] setObject:[((UITextField*)sender) text] atIndex:i];
-            break;
+            return;
         }
     }
-}
-
--(IBAction) changeScore:(id)sender
-{
+    
     for (int i = 0; i < [assign count]; i++)
     {
         NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:i];
@@ -285,7 +287,7 @@
         if (sender == [((TextCell*)[tvScore cellForRowAtIndexPath:path]) textBox])
         {
             [[[assign objectAtIndex:curMeet] objectForKey:@"score"] setObject:[((UITextField*)sender) text] atIndex:i];
-            break;
+            return;
         }
     }
 }
@@ -376,21 +378,21 @@
         {
             cell.textBox.text = [NSString stringWithFormat:@"%@",[[assign objectAtIndex:[indexPath section]] valueForKey:@"meet"]];
             [cell.textBox addTarget:self
-                             action:@selector(changeMeet:)
+                             action:@selector(changeMeet:) //TODO: May not need this anymore
                    forControlEvents:UIControlEventEditingChanged];
         }
         else if (tableView == tvEvent)
         {
             cell.textBox.text = [NSString stringWithFormat:@"%@",[((NSMutableArray*)[[assign objectAtIndex:curMeet] valueForKey:@"event"]) objectAtIndex:[indexPath section]]];
             [cell.textBox addTarget:self
-                             action:@selector(changeEvent:)
+                             action:@selector(changeEvent:)//TODO: May not need this anymore
                    forControlEvents:UIControlEventEditingChanged];
         }
         else if (tableView == tvScore)
         {
             cell.textBox.text = [NSString stringWithFormat:@"%@",[((NSMutableArray*)[[assign objectAtIndex:curMeet] valueForKey:@"score"]) objectAtIndex:[indexPath section]]];
             [cell.textBox addTarget:self
-                             action:@selector(changeScore:)
+                             action:@selector(changeScore:)//TODO: May not need this anymore
                    forControlEvents:UIControlEventEditingChanged];
         }
         
@@ -618,12 +620,6 @@
      --- (NSString *)identifier returns the value specified with initWithIdentifier.
      --- (NSString *)ReturnValue returns the selected item from the valueArray.
      */
-    
-    // check to see if the selected menu was textmenu1
-    if ([identifier rangeOfString:@"meetMenu"].location != NSNotFound)
-    {
-        
-    }
 }
 
 - (void)didReceiveMemoryWarning

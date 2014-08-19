@@ -109,16 +109,6 @@
 		vrLen = 292;
 		vrLoc = 0;
 	};
-	2A5C3F321784B2BE00B7C766 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2AF34FBF1778056400E646D9 /* PlayerNew.h */;
-		name = "PlayerNew.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 881;
-		vrLoc = 0;
-	};
 	2A5C3F331784B2BE00B7C766 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2AF34FBF1778056400E646D9 /* PlayerNew.h */;
@@ -127,6 +117,16 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 970;
+		vrLoc = 92;
+	};
+	2AA761A719A3220D00081130 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2AF34FBF1778056400E646D9 /* PlayerNew.h */;
+		name = "PlayerNew.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 935;
 		vrLoc = 92;
 	};
 	2ACA4C06177246EC00F3B3F0 /* Project object */ = {
@@ -163,8 +163,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 394572452;
-			PBXWorkspaceStateSaveDate = 394572452;
+			PBXPerProjectTemplateStateSaveDate = 430121380;
+			PBXWorkspaceStateSaveDate = 430121380;
 		};
 		perUserProjectItems = {
 			2A23ABF81779679500FBE4A1 /* PBXTextBookmark */ = 2A23ABF81779679500FBE4A1 /* PBXTextBookmark */;
@@ -173,8 +173,8 @@
 			2A5C3F241784B29700B7C766 /* PlistBookmark */ = 2A5C3F241784B29700B7C766 /* PlistBookmark */;
 			2A5C3F251784B29700B7C766 /* PBXTextBookmark */ = 2A5C3F251784B29700B7C766 /* PBXTextBookmark */;
 			2A5C3F261784B29700B7C766 /* PBXTextBookmark */ = 2A5C3F261784B29700B7C766 /* PBXTextBookmark */;
-			2A5C3F321784B2BE00B7C766 /* PBXTextBookmark */ = 2A5C3F321784B2BE00B7C766 /* PBXTextBookmark */;
 			2A5C3F331784B2BE00B7C766 /* PBXTextBookmark */ = 2A5C3F331784B2BE00B7C766 /* PBXTextBookmark */;
+			2AA761A719A3220D00081130 /* PBXTextBookmark */ = 2AA761A719A3220D00081130 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 2A23ABD1177965D300FBE4A1 /* Source Control */;
 		userBuildSettings = {
@@ -191,9 +191,9 @@
 	};
 	2AF34FBF1778056400E646D9 /* PlayerNew.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {954, 741}}";
+			sepNavIntBoundsRect = "{{0, 0}, {954, 728}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{92, 970}";
+			sepNavVisRange = "{92, 935}";
 		};
 	};
 	2AF34FCB1778056400E646D9 /* en */ = {
